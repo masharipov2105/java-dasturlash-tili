@@ -14,6 +14,9 @@ public class Main{
         byte son2 = 15;
         String son_16 = "0x0F";
         String son_str = "22";
+
+        Byte son_byte = Byte.valueOf("55");
+
         //konstalar qiymatlari
         System.out.println("Byte ning maksimal qiymati: " + Byte.MAX_VALUE);
         System.out.println("Byte ning minimal qiymati: " + Byte.MIN_VALUE);
@@ -30,5 +33,16 @@ public class Main{
         System.out.println("byte o'zgaruvchisini qiymatini olib uni Byte wrapper sinfiga o'rab qiymatni qaytaradi: Byte.valueOf(15) " + Byte.valueOf(son2));
         System.out.println("Matn ko'rinishidagi sonni qiymatni byte olib uni wrapper sinfga o'rab qiymatni qaytaradi: Byte(valueOf('22')) " + Byte.valueOf(son_str));
         System.out.println("matn ko'rinishidagi sonni qiymatini berilan sanoq tizimida ekanligni bilgan xolda uni qiymatini 10 lik tizimga o'giradi va wrapper sinfga o'raydi so'ng qiymatini qaytaradi: Byte.valueOf('22', 3) " + Byte.valueOf(son_str, 3));
+
+        //instance metodlar
+        System.out.println("Byte obektining qiymatini byteda qaytaradi: son_byte.byteValue() " + son_byte.byteValue());
+        System.out.println("Byte obektining qiymatini boshqa byte tipidagi o'zgaruvchi qiymati bilan farqini qaytaradi: son_byte.compareTo(17) " + son_byte.compareTo(son2));
+        System.out.println("Byte obektini qiymatini double tipiga kengaytirb, qiymatini qaytaradi: son_byte.doubleValue() " + son_byte.byteValue()); 
+        System.out.println("Byte obektini boshqa bir ixtiyoriy obekt bilan avval tip bo'yicha keyin qiymat bo'yicha taqqoslaydi, agar hammasi yeng bo'lsa true qaytaradi, aks xolda false qaytaradi: son_byte.equals(Object obj) " + son_byte.equals(son_16));
+        System.out.println("Byte obektini qiymatini floatga tipiga kengaytirib, qiymatini qaytaradi: son_byte.floatValue() " + son_byte.floatValue());
+        System.out.println("Byte obektini qiymatini int tipiga kengaytirib, qiymatini qaytaradi: son_byte.intValue() " + son_byte.intValue());
+        System.out.println("Byte obektini qiymatini long tipiga kengaytirib, qiymatini qaytaradi: son_byte.longValue() " + son_byte.longValue());
+        System.out.println("Byte obektini qiymatini short tipiga kengaytirib, qiymatini qaytaradi: son_byte.shortValue() " + son_byte.shortValue());
+        System.out.println("Byte obektini qiymatini String obektiga aylantirib, qiymatini qaytaradi: son_byte.toString() " + son_byte.toString());
     }
 }
