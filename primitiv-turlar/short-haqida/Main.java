@@ -13,7 +13,10 @@ public class Main{
         short son1 = 120;
         short son2 = 150;
         String son_16 = "0xAB";
-        String son_str = "171";
+        String son_str = "111";
+
+        Short short_son = Short.valueOf(son_str);
+        Short short_son2 = Short.valueOf("111");
 
         //Konstanta qiymatlari
         System.out.println("Shortning eng kichik qiymati: Short.MIN_VALUE " + Short.MIN_VALUE);
@@ -31,5 +34,15 @@ public class Main{
         System.out.println("short o'zgaruvchisini qiymatini Short wrapper sinfiga o'raydi va Short obekti sifatida qiymatini qaytaradi: Short.valueOf(120) " + Short.valueOf(son1));
         System.out.println("matn ko'rinishida ifodalangan sonni qiymatini standart xolatda 00 lik tizimda deb qataydi va Short wrapper sinfiga o'rab uni qiymatini qaytaradi: Short.valueOf('171') " + Short.valueOf(son_str));
         System.out.println("matn ko'rinishida ifodalangan va berilgan son qiymatiga teng sanoq tizimida deb xisoblan qiymatni 10 lik tizimga o'giradi va Short wrapper sinfiga o'rab qiymatini qaytaradi: Short.valueOf('171', 8) " + Short.valueOf(son_str, 8));
+
+        //instance metodlar
+        System.out.println("Short obektini qiymatini byte tipiga toraytirib, qiymatini qaytaradi: short_son.byteValue() " + short_son.byteValue());
+        System.out.println("Short obektini qiymatini boshqa bir short o'zgaruvchisini qiymatlari orasidagi farqni short tipida qaytaradi: short_son.compareTo(120) " + short_son.compareTo(son1));
+        System.out.println("Short obektini avval sinf bo'yicha keyin qiymatlari bo'yicha taqqoslaydi, agar barchasi teng bo'lsa true qaytaradi, aks xolda false qaytaradi: short_son.equals((short) 111) " + short_son.equals(short_son2));
+        System.out.println("Short obektini qiymatini float tipiga kengaytiradi va qiymatini qaytaradi: short_son.floatValue() " + short_son.floatValue());
+        System.out.println("Short obektini qiymatini int tipiga kengaytiradi va qiymatini qaytaradi: short_son.intValue() " + short_son.intValue());
+        System.out.println("Short obektini qiymatini long tipiga kengaytiradi va qiymatini qaytaradi: short_son.longValue() " + short_son.longValue());
+        System.out.println("Short obektini qiymatini short pirimitiv turiga o'giradi va qiymatini qaytaradi: short_son.shortValue() " + short_son.shortValue());
+        System.out.println("Short obektini String obektiga aylantiradi va qiymatini qaytaradi: short_son.toString() " + short_son.toString());
     }
 }
