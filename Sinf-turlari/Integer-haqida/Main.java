@@ -31,9 +31,9 @@ public class Main{
         System.out.println("ikkita int tipidagi qiymatlar yig'indisini qaytaradi: Integer.sum(1001, 1100) " + Integer.sum(son1, son2));
         System.out.println("int tipidagi son qiymatini String obektiga aylantiradi va qiymatini qaytaradi: Integer.toString(1001) " + Integer.toString(son1));
         System.out.println("int tipidagi son qiymatini biz belgilagan sanoq tizimiga o'giradi va qiymatini qaytaradi: Integer.toString(1100, 2) " + Integer.toString(son2, 2));
-        System.out.println("matn ko'rinishidagi sonni sonni Integer wrapper sinfiga o'raydi va qiymatini qaytaradi: Integer.valueOf(''2255) " + Integer.valueOf(son_str));
-        System.out.println("int tipidagi sonni Integer wrapper sinfiga o'raydi va qiymatini qaytaradi: Integer.valueOf(1100) " + Integer.valueOf(son2));
-        System.out.println("matn ko'risnishida va sanoq tizimi ham belgilangan xolatda Integer wrapper sinfiga o'raydi sonni 10 lik tizimga o'giradi va qiymatini qaytaradi: Integer.valueOf('2255', 8) " +Integer.valueOf(son_str, 8));
+        System.out.println("matn ko'rinishidagi sonni sonni Integer wrapper sinfiga o'raydi va qiymatini Stringda qaytaradi: Integer.valueOf(''2255) " + Integer.valueOf(son_str));
+        System.out.println("int tipidagi sonni Integer wrapper sinfiga o'raydi va qiymatini Stringda qaytaradi: Integer.valueOf(1100) " + Integer.valueOf(son2));
+        System.out.println("matn ko'risnishida va sanoq tizimi ham belgilangan xolatda Integer wrapper sinfiga o'raydi sonni 10 lik tizimga o'giradi va qiymatini Stringda qaytaradi: Integer.valueOf('2255', 8) " +Integer.valueOf(son_str, 8));
 
         //instance metodlar
         System.out.println("Integer obektini qimatini olib uni byte tipiga toarytiradi va qiymatini byte tipida qaytaradi: son_int.byteValue() " + son_int.byteValue());
