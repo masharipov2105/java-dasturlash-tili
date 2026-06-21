@@ -30,9 +30,9 @@ public class Main{
         System.out.println("Matn ko'rinishidagi sonni byte qiymatini qaytaradi: parseByte('22') " + Byte.parseByte(son_str));
         System.out.println("Matn ko'rinishida va biror sanoq tizimda yozilgan sonni bye qiymatini 10 lik tizimda qaytaradi: parseByte('22', 3) " + Byte.parseByte(son_str, 3));
         System.out.println("byte o'zgaruvchi qiymatini String tipidagi qiymatini qaytaradi: Byte.toString(15) " + Byte.toString(son2));
-        System.out.println("byte o'zgaruvchisini qiymatini olib uni Byte wrapper sinfiga o'rab qiymatni qaytaradi: Byte.valueOf(15) " + Byte.valueOf(son2));
-        System.out.println("Matn ko'rinishidagi sonni qiymatni byte olib uni wrapper sinfga o'rab qiymatni qaytaradi: Byte(valueOf('22')) " + Byte.valueOf(son_str));
-        System.out.println("matn ko'rinishidagi sonni qiymatini berilan sanoq tizimida ekanligni bilgan xolda uni qiymatini 10 lik tizimga o'giradi va wrapper sinfga o'raydi so'ng qiymatini qaytaradi: Byte.valueOf('22', 3) " + Byte.valueOf(son_str, 3));
+        System.out.println("byte o'zgaruvchisini qiymatini olib uni Byte wrapper sinfiga o'rab qiymatni Stringda qaytaradi: Byte.valueOf(15) " + Byte.valueOf(son2));
+        System.out.println("Matn ko'rinishidagi sonni qiymatni byte olib uni wrapper sinfga o'rab qiymatni Stringda  qaytaradi: Byte(valueOf('22')) " + Byte.valueOf(son_str));
+        System.out.println("matn ko'rinishidagi sonni qiymatini berilan sanoq tizimida ekanligni bilgan xolda uni qiymatini 10 lik tizimga o'giradi va wrapper sinfga o'raydi so'ng Stringda qiymatini qaytaradi: Byte.valueOf('22', 3) " + Byte.valueOf(son_str, 3));
 
         //instance metodlar
         System.out.println("Byte obektining qiymatini byteda qaytaradi: son_byte.byteValue() " + son_byte.byteValue());
