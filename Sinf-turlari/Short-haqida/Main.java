@@ -31,9 +31,9 @@ public class Main{
         System.out.println("matn ko'rinishidagi sonni qiymatini 10lik tizimda short tipiga o'girib qiymatini qaytaradi: Short.parseShort('171') " + Short.parseShort(son_str));
         System.out.println("matn ko'rinishida ifodalangan sonni berigan son qiymatidagi sanoq tizimida deb xisoblab matndagi son qiymatni 10 lik songa o'tkazib uning qiymatini short tipida qaytaradi: Short.parseShort('171', 8) " + Short.parseShort(son_str, 8));
         System.out.println("short o'zgaruvchisini qiymatini yangi String obekt sifatida matn ko'rinishidagi qiymatini qaytaradi: Short.toString(150) " + Short.toString(son2));
-        System.out.println("short o'zgaruvchisini qiymatini Short wrapper sinfiga o'raydi va Short obekti sifatida qiymatini qaytaradi: Short.valueOf(120) " + Short.valueOf(son1));
-        System.out.println("matn ko'rinishida ifodalangan sonni qiymatini standart xolatda 00 lik tizimda deb qataydi va Short wrapper sinfiga o'rab uni qiymatini qaytaradi: Short.valueOf('171') " + Short.valueOf(son_str));
-        System.out.println("matn ko'rinishida ifodalangan va berilgan son qiymatiga teng sanoq tizimida deb xisoblan qiymatni 10 lik tizimga o'giradi va Short wrapper sinfiga o'rab qiymatini qaytaradi: Short.valueOf('171', 8) " + Short.valueOf(son_str, 8));
+        System.out.println("short o'zgaruvchisini qiymatini Short wrapper sinfiga o'raydi va Short obekti sifatida qiymatini Stringda qaytaradi: Short.valueOf(120) " + Short.valueOf(son1));
+        System.out.println("matn ko'rinishida ifodalangan sonni qiymatini standart xolatda 00 lik tizimda deb qataydi va Short wrapper sinfiga o'rab uni qiymatini Stringda qaytaradi: Short.valueOf('171') " + Short.valueOf(son_str));
+        System.out.println("matn ko'rinishida ifodalangan va berilgan son qiymatiga teng sanoq tizimida deb xisoblan qiymatni 10 lik tizimga o'giradi va Short wrapper sinfiga o'rab qiymatini Stringda qaytaradi: Short.valueOf('171', 8) " + Short.valueOf(son_str, 8));
 
         //instance metodlar
         System.out.println("Short obektini qiymatini byte tipiga toraytirib, qiymatini qaytaradi: short_son.byteValue() " + short_son.byteValue());
