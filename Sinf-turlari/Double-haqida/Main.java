@@ -14,6 +14,9 @@ public class Main{
         double son1 = 125.75;
         double son2 = 200.25;
         String son_str = "22.55";
+        Double son_double = Double.valueOf(son_str);
+        Double son_double2 = Double.valueOf(son1);
+        Float son_float = Float.valueOf("22.55f");
 
         //konstanta qiymatlari
         System.out.println("double ning xotira xajmi (baytda): Double.BYTES " + Double.BYTES + " bayt");
@@ -36,6 +39,19 @@ public class Main{
         System.out.println("double tipidagi qiymatni String obektiga aylanti0radi va qiymatini qaytaradi: Double.toString(200.25) " + Double.toString(son2));
         System.out.println("double tipidagi qiymatni Double wrapper sinfiga o'raydi va Double obektini yaratadi, Stringda qiymatini qaytaradi: Double.valueOf(125.75) " + Double.valueOf(son1));
         System.out.println("matn ko'rinishidagi sonni Double wrapper sinfiga o'rab Double obektini yaratadi va Stringda qiymatini qaytaradi: Double.valueOf('22.55') " + Double.valueOf(son_str));
+
+        //instance metodlar
+        System.out.println("Double obektini qiymatini bytega toraytirib, butun ko'rinishda, qiymatini byte da qaytaradi: son_double.byteValue() " + son_double.byteValue());
+        System.out.println("Double obektini qiymatini boshqa bir double obektini qiymati bilan taqqoslaydi, agar obekt qiymati taqqoslanayotgan obekt qiymatidan kichik bo'lsa -1 ni qaytaradi, agar aksincha bo'lsa 1 ni qaytaradi, agar teng bo'lsalar 0 ni qaytaradi: son_double.compareTo(125.75) " + son_double.compareTo(son_double2));
+        System.out.println("Double obektini qiymatini double tipiga o'zgartirib qiymatini double da qaytaradi: son_double.doubleValue() " + son_double.doubleValue());
+        System.out.println("Double obektini boshqa bir obekt bilan avval tiplari bo'yicha keyin qiymatlari bo'yicha taqqoslaydi, agar hammasi bir xil bo'lsa true qaytaradi, aks xolda false qaytaradi: son_double.equals(22.55f) " + son_double.equals(son_float));
+        System.out.println("Double obektini qiymatini float tipiga toraytirib, qiymatini floatda qaytaradi: son_double.floatValue() " + son_double.floatValue());
+        System.out.println("Double obektini qiymatini int ga toraytirib butin shaklga o'tkazadi va qiymatini int da qaytaradi: son_double.intValue() " + son_double.intValue());
+        System.out.println("Double obektini qiymatini cheksizlikka tekshiradi: son_double.isInfinite() " + son_double.isInfinite());
+        System.out.println("Double obektini qiymatini aniq yoki noaniq ekanligiga tekshiradi: son_double.isNaN() " + son_double.isNaN());
+        System.out.println("Double obektini qiymatini long tipiga kengaytirib, butun shaklda va qiymatini longda qaytaradi: son_double.longValue() " + son_double.longValue());
+        System.out.println("Double obektini qiymatini short tipiga toraytirib, butun shaklda va qiymatini shortda qaytaradi: son_double.shortValue() " + son_double.shortValue());
+        System.out.println("Double obeltini qiymatini String tipoga o'zgartirib qiymatini stringda qaytaradi: son_double.toString() " + son_double.toString());
 
 
     }
