@@ -15,8 +15,10 @@ public class Main{
         long son2 = 120L;
         String son_16 = "0xAABB";
         String son_str = "salom123";
-        String son_str2 = "123225";
+        String son_str2 = "123";
 
+        Long son_long = Long.valueOf(son_str2);
+        Long son_long2 = Long.valueOf(son_str2);
         //konstanta qiymatlari
         System.out.println("long tipining xotira xajmi (baytda): Long.BYTES " + Long.BYTES + " bayt");
         System.out.println("long tipining eng katta qiymati: Long.MAX_VALUE " + Long.MAX_VALUE);
@@ -39,6 +41,17 @@ public class Main{
         System.out.println("long tipidagi qiymatni olib Long wrapper sinfiga tegishli obekt yaratadi va unga qiymat sifatida beradi va println ichida bu obektni String sifatida qaytaradi: Long.valueOf(100L) " + Long.valueOf(100L));
         System.out.println("matn ko'rinishidagi sonni olib Long wrapper sinfiga tegishli obekt yaratadi va qiymat sifatida beradi, println ichida esa bu obektni String sifatida qaytaradi: Long.valueOf('123225') " + Long.valueOf(son_str2));
         System.out.println("matn ko'rinishida ifodalangan sonni oladi va qaysi sanoq tizimga tegishli ekanligini xisobga olib 10 lik tizimga o'tkazadi va Long wrapper sinfiga tegishli obekt yaratib unga qiymat sifatida beradi, println ichida obektni String sifatida qaytaradi: Long.valueOf('123', 4) " + Long.valueOf("123", 4));
+
+        //instance metodlar
+        System.out.println("Long obektini qiymatini bytega toraytiradi va qiymatini byte da qaytaradi: son_long.byteValue() " + son_long.byteValue());
+        System.out.println("Long obektini qiymatini boshqa bir Long obektini qiymati bilan taqqoslaydi, agar bitinchi obekt qiymati ikkinchisidan kichik bo'lsa -1, aksincha bo'lsa 1, agar teng bo'lsalar 0 ni qaytaradi: son_long.compareTo((long) 123L) " + son_long.compareTo((123L)));
+        System.out.println("Long obektini qiymatini double ga toraytiradi va qiymatni double da qataradi: son_long.doubleValue() " + son_long.doubleValue());
+        System.out.println("Long obektini boshqa bir obekt bilan avval tiplar bo'yicha keyin qiymatlari bo'yicha taqqoslaydi, agar barchasi teng bo'lsa true qaytaradi, aks xolda false qaytaradi: son_long.equals((long) 123L) " + son_long.equals(son_long2));
+        System.out.println("Long obektini qiymatini float tipiga toraytiradi va qiymatini float tipida qaytaradi: son_long.floatValue() " +son_long.floatValue());
+        System.out.println("Long obektini qiymatini int tipiga toraytiradi va qiymatini int tipida qaytaradi: son_long.intValue() " + son_long.intValue());
+        System.out.println("Long obektini qiymatini long primitiv tipga olib o'tadi va qiymatini long tipida qaytaradi: son_long.longValue() " + son_long.longValue());
+        System.out.println("Long obektini qiymatini short tipiga toraytiradi va qiymatini short tipida qaytaradi: son_long.shortValue() " + son_long.shortValue());
+        System.out.println("Long obketini qiymatini String obekti qiymati qiladi va String tipida qaytaradi: son_long.toString() " + son_long.toString());
 
     }
 }
