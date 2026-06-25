@@ -17,6 +17,8 @@ public class Main{
         char belgi4 = '	';
         char belgi5 = 'B';
 
+        Character char_obekt = Character.valueOf(belgi2);
+
         //konstanta qiymatlari
         System.out.println("char tipining xotira xajmi (baytda): Character.BYTES " + Character.BYTES + " bayt");
         System.out.println("char tipining xotira xajmi (bitda): Character.SIZE " + Character.SIZE + " bit");
@@ -39,6 +41,12 @@ public class Main{
         System.out.println("belgini olib Character wrapper sinfiga o'raydi va obekt yaratadi, println ichida esa obektni String sifatida qaytaradi: Character.valueOf('a') " + Character.valueOf(belgi1));
         System.out.println("char tipidagi belgini String obektiga aylantirib qaytaradi: Character.toString('B') " + Character.toString(belgi5));
         System.out.println("ikkita char tipidagi qiymatlarni solishtiradi, va orasidagi farqni qaytaradi: Character.compare('a' , 'B') " + Character.compare(belgi5, belgi1));
+
+        //instance metodlar
+        System.out.println("Character obektini qiymatini char tipida qataradi: char_obekt.charValue() " + char_obekt.charValue());
+        System.out.println("Character obektini qiymatini boshqa bir char qiymat bilan solishtirib orasidagi farqni qaytaradi: char_obekt.compareTo('?') " + char_obekt.compareTo(belgi3));
+        System.out.println("Character obektini boshqa bir obekt bilan avval tiplari bo'yicha keyin qiymatlar bo'yicha solishtiradi, agar hammasi teng bo'lsa true qaytaradi aks xolda false qaytaradi: char_obekt.equals((double) 7) " + char_obekt.equals((double) 7));
+        System.out.println("Character obektini qiymatini String obekti sifatida qaytaradi: Cchar_obekt.toString() " + char_obekt.toString());
 
     }
 }
