@@ -6,6 +6,7 @@
 
 */
 
+import java.util.Arrays;
 
 public class Main{
 
@@ -36,6 +37,25 @@ public class Main{
         System.out.println("formatlangan satr yaratish, xuddi pythondagi f'{}' ga alternativ: String.format('Salom %s, yosh %d', 'Asadbek', 25) " + String.format("Salom %s, yosh %d", "Asadbek", 25));
         System.out.println("valueOf ga o'xshaydi, char massividagi elementlardan String obketi uchun qiymat yaratadi: String.copyValueOf(new char[]{'j', 'a', 'v', 'a'}) " + String.copyValueOf(new char[]{'j', 'a', 'v', 'a'}));
 
+        //instance metodlar
+        System.out.println("satr uzunligi, yani belgilar sonini qaytaradi: satr1.length() " + satr1.length());
+        System.out.println("satr uzunligini 0 ga tekshiradi: satr1.isEmpity() " + satr1.isEmpty());
+        System.out.println("String obektini qiymatini berilgan son marta takrorlab yangi matn yaratadi: satr1.repeat(3) " + satr1.repeat(3));
+        System.out.println("satrning tarkibi probel yoki bo'sh (uzunligi 0) bo'lsa true qaytaradi: satr1.isBlank() " + satr1.isBlank());
+        System.out.println("satrning berilgan index soniga mos belgisini qaytaradi: satr1.charAt(0) " + satr1.charAt(0));
+        System.out.println("String obektini boshqa bir obekt bilan avval tiplar bo'yicha keyin qiymatlar bo'yicha solishtiradi: agar hammasi teng bo'lsa tre ni qaytaradi, aks xolda false ni qaytaradi: satr1.equals('Salom java') " + satr1.equals("Salom java"));
+        System.out.println("satrni katta-kichik haeflarga qaramasdan taqqoslaydi: satr1.equalsIgnoreCase('salom JAVA') " + satr1.equalsIgnoreCase("salom JAVA"));
+        System.out.println("String obektini qiymatini boshqa bir string obketi qiymati bilan taqqsolaydi va orasidagi farqni qaytaradi: satr1.compareTo('salom java') " + satr1.compareTo("salom java"));
+        System.out.println("Berilgan ketmaketlik satr tarkibida borligini aniqlaydi: satr1.contains('ava') " + satr1.contains("ava"));
+        System.out.println("Berilgan satr, obekt qiymati tarkibida ilk marta qaysi indexda kelganini qaytaradi, aks xolda -1 ni qaytaradi: satr1.indexOf(' ') " + satr1.indexOf(" "));
+        System.out.println("Berilgan indexdan boshlab satr, obekt qiymatida birinchi uchiragan natijani indexini qaytaradi: satr1.indexOf('j', 7) " + satr1.indexOf("a", 8));
+        System.out.println("String obektini qiymatini barini bosh harflarga o'girib qaytaradi: satr1.toUpperCase() " + satr1.toUpperCase());
+        System.out.println("String obektini qiymatini barini kichik harflarga o'girib qaytaradi: satr1.toLowerCase() " + satr1.toLowerCase());
+        System.out.println("String obektini qiymatini boshi va oxiridagi bo'shliqlar va probellarni olib tashlaydi: satr1.trim() " + satr1.trim());
+        System.out.println("String obektini qiymatini boshi va oxiridagi bo'shliq va probellarni unicode bo'yicha olib tashlaydi: satr1.strip() " + satr1.strip());
+        System.out.println("String obektini qiymatida berilgan 1-qiymatga mos belgilarni 2-qiymat ga almashtirib beradi: satr1.replace('a', 'A') " + satr1.replace("a", "A"));
+        System.out.println("String obektini qiymatini berilgan 1-qiymatga mos satrni 2-qiymatga mos satr bilan almashtiradi: satr1.replace('java', 'Spring') " + satr1.replace("java", "Spring"));
+        System.out.println("String obektini qiymatini berilgan ajratgich asosida String massivini qaytaradi: satr1.split(' ') " + Arrays.toString(satr1.split(" ")));
 
     }
 }
