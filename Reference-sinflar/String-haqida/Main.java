@@ -16,6 +16,9 @@ public class Main{
         byte[] byte_massiv = new byte[]{74, 97, 118, 97};
         StringBuilder string_builder = new StringBuilder("Salom");
         StringBuffer string_buffer = new StringBuffer("Salom Buffer");
+        long son1 = 2255L;
+
+        String satr1 =  String.valueOf("Salom java");
 
         //konstruktorlar
         System.out.println("bo'sh satrli qiymatga ega obekt yaratadi: new String() " + new String());
@@ -26,5 +29,13 @@ public class Main{
         System.out.println("byte tipidagi massiv elementlarini ASCII jadvalidagi belgilarga mos qiymatlarini berilgan pozistsiyadan boshlab nechta belgini olish kerakligini ko'rsatgan xolda String obektiga qiymat yaratadi: String(new byte[]{74, 97, 118, 17}, 0, 2) " + new String(byte_massiv, 0, 2));
         System.out.println("StringBuilder obektidan qiymatni olib String obektiga tayinlaydi: new String(new StringBuilder('Salom')) " + new String(string_builder));
         System.out.println("StringBuffer obektidan qiymatni olib String obektiga tayinlaydi: new String(new StringBuffer('Salom Buffer')) " + new String(string_buffer));
+
+        //static metodlar
+        System.out.println("istalgan tipdagi, umuman Object sinfiga tegishli har qanday obektni String obkketiga aylantiradi: String.valueOf((long) 2255L) " + String.valueOf(son1));
+        System.out.println("ko'rsatilgan ajratuvchi belgi asosida qolgan qiymatlarni birlashtiradi: String.join('#', 's', 'a', 'l', 'o', 'm') " + String.join("#", "s", "a", "l", "o", "m"));
+        System.out.println("formatlangan satr yaratish, xuddi pythondagi f'{}' ga alternativ: String.format('Salom %s, yosh %d', 'Asadbek', 25) " + String.format("Salom %s, yosh %d", "Asadbek", 25));
+        System.out.println("valueOf ga o'xshaydi, char massividagi elementlardan String obketi uchun qiymat yaratadi: String.copyValueOf(new char[]{'j', 'a', 'v', 'a'}) " + String.copyValueOf(new char[]{'j', 'a', 'v', 'a'}));
+
+
     }
 }
