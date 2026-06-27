@@ -29,28 +29,50 @@ public class Main{
         int son_1 = 22;
         int son_2 = 55;
         int son_3 = son_1 + son_2;
-        System.out.println("butun sonlar yig'indi: " + son_3);
+        System.out.println("(22 + 55) butun sonlar yig'indi: " + son_3);
 
         float f_1 = 12.7f;
         float f_2 = 7.8f;
         float f_sum = f_1 + f_2;
-        System.out.println("kasr sonlar yig'indisi: " + f_sum);
+        System.out.println("(12.7f + 7.8f) kasr sonlar yig'indisi: " + f_sum);
 
         String satr_1 = "Salom";
         String satr_2 = "dunyo";
         String probel = " " ;
-        System.out.println("Satrlar yig'indisi: " + satr_1 + probel + satr_2);
+        System.out.println("('Salom' + ' ' + 'dunyo') Satrlar yig'indisi: " + satr_1 + probel + satr_2);
 
         //ayrish operatori
         int s_1 = 17;
         int s_2 = 21;
         int s_ = s_1 - s_2;
-        System.out.println("butun sonlar ayirmasi: " + s_);
+        System.out.println("(17 - 21) butun sonlar ayirmasi: " + s_);
 
         float f_3 = 17.74f;
         float f_4 = 20.86f;
         float f_ = f_3 - f_4;
-        System.out.println("kasr sonlar ayirmasi: " + f_);
+        System.out.println("(17.74f - 20.86f) kasr sonlar ayirmasi: " + f_);
+
+        //ko'paytirish operatori
+        int s_3 = 25;
+        int s_4 = 4;
+        int s__ = s_3 * s_4;
+        System.out.println("(25 * 4) butun sonlar ko'paytmasi: " + s__);
+
+        float s_5 = 12.5f;
+        float s_6 = 8.0f;
+        float f__ = s_5 * s_6;
+        System.out.println("(12.5f * 8.0f)  kasr sonlar ko'paytmasi: " + f__);
+
+        //bo'lish operatori
+        int s_7 = 30;
+        int s_8 = 7;
+        int s___ = s_7 / s_8;
+        System.out.println("(30 / 7) butun sonlar bo'linmasi: " + s___);
+
+        float f_5 = 7.8f;
+        float f_6 = 3.0f;
+        float f___ = f_5 / f_6;
+        System.out.println("(7.8f / 3.0f) kasr sonlar bo'linmasi: " + f___);
 
     }
 }
