@@ -31,5 +31,13 @@ public class Main{
         System.out.println("(int 30 != int 30) " + (s_2 != s_3));
         //System.out.println("(String salom != int 30) " + (str_1 != s_2)); bu ikki tip o'rtasida avtomatik bir biriga kengaytirish imkoni yo'q ERROR
 
+        int k_1 = 30;
+        int k_2 = 20;
+        float k_3 = 12.7f;
+        float k_4 = 20.7f;
+        System.out.println("(int 30 > int 20) " + (k_1 > k_2));
+        System.out.println("(float 12.7f > float 20.7f) " + (k_3 > k_4));
+        System.out.println("(int 30 < int 20) " + (k_1 < k_2));
+        System.out.println("(float 12.7f < float 20.7f) " + (k_3 < k_4));
     }
 }
