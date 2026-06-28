@@ -74,5 +74,17 @@ public class Main{
         float f___ = f_5 / f_6;
         System.out.println("(7.8f / 3.0f) kasr sonlar bo'linmasi: " + f___);
 
+        //qoldiqli bo'lish
+        int s_9 = 14;
+        int s_10 = 3;
+        int qoldiq = s_9 % s_10; // 14 ni 3 bo'lganda qoladigan qoldiq yani 2 ni qaytaradi
+        System.out.println("(14 % 3) butun sonlar bo'linmasidagi qoldiq: " + qoldiq);
+
+        double d_1 = 13.2;
+        double d_2 = 0.2;
+        double qoldiq_d = d_1 % d_2;
+        System.out.println("(13.2 % 0.2) kasr sonlarni bo'lishdagi qoldiq: " + qoldiq_d);
+
     }
 }
+
