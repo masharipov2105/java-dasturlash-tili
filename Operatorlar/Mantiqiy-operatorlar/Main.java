@@ -37,5 +37,12 @@ public class Main{
         System.out.println("(bool false || bool true) " + natija7);
         System.out.println("(bool true || bool true) " + natija8);
 
+        // NOT (!) operatori
+
+        boolean natija9 = !(qiymat2);
+        boolean natija10 = !(qiymat1);
+
+        System.out.println("!(bool false) " + natija9);
+        System.out.println("!(bool true) " + natija10);
     }
 }
