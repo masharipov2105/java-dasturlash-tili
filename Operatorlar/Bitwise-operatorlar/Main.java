@@ -37,5 +37,17 @@ public class Main{
         8) tezkor formula ~x = -(x + 1)
         */
         System.out.println("(~ 5) " + c2); // -6 ga teng
+
+        // << Left shift oeratori
+        int a3 = 5;
+        int b3 = 2;
+        int c3 = a3 << b3; // 5 -> 0101; 10100; yani 0101 ni bitlarini 2 xona oldinga silchitib o'ng tomoniga 0 larni qo'shish, natijani 10 lik tizimga o'girish, 10100 -> 20
+        System.out.println("(5 << 2) " + c3);
+
+        // >> Right shift operatori
+        int a4 = 4;
+        int b4 = 1;
+        int c4 = a4 >> b4; // 4 -> 0100; 0010 yani chap tarafga 0 lar qo'shiladi,; natijani 10 lik tizimga o'girish 0010 -> 2
+        System.out.println("(4 >> 1) " + c4);
     }
 }
