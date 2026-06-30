@@ -49,5 +49,11 @@ public class Main{
         int b4 = 1;
         int c4 = a4 >> b4; // 4 -> 0100; 0010 yani chap tarafga 0 lar qo'shiladi,; natijani 10 lik tizimga o'girish 0010 -> 2
         System.out.println("(4 >> 1) " + c4);
+
+        // XOR (^) operatori
+        int a5 = 7;
+        int b5 = 10;
+        int c5 = a5 ^ b5; // 7 -> 0111, 10 = 1010; 0111 ^ 1010 = 1101; 1101 -> 13
+        System.out.println("(7 ^ 10) " + c5);
     }
 }
