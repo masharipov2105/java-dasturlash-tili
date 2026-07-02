@@ -25,5 +25,22 @@ public class Main{
     System.out.println("son1 o'zgaruvchisiga 27 degan qiymatni yuklash " + son1);
     System.out.println("satr1 o'zgaruvchisiga 'salom' degan qiymatni yuklash " + satr1);
     System.out.println("son2 o'zgaruvchisiga operatordan keyin o'ng tarafda turgan ifodani qiymatini yuklash "+ son2);
+
+    // += operatori;
+    int a1 = 5;
+    a1 += 15;
+
+    short s1 = 7;
+    s1 += 7;
+    //s1 = s1 + 1; xatolik qahatradi int dan shortga o'tib bo'lmaydi degan ma'noda
+    System.out.println("a1 += 15, a1 ning qiymatini 15 ga oshiryapti " + a1);
+    System.out.println("s1 += 7, short tipidagi s1 o'zgaruvchisini qiymatini 7 ga oshirish " + s1);
+
+    // -= operatori
+
+    int a2 = 22;
+    a2 -= 7;
+    System.out.println("a2 -= 7, a2 o'zgaruvchisini qiymatini 7 ga kamaytirish " + a2);
+
     }
 }
