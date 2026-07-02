@@ -29,7 +29,6 @@ public class Main{
     // += operatori;
     int a1 = 5;
     a1 += 15;
-
     short s1 = 7;
     s1 += 7;
     //s1 = s1 + 1; xatolik qahatradi int dan shortga o'tib bo'lmaydi degan ma'noda
@@ -37,10 +36,24 @@ public class Main{
     System.out.println("s1 += 7, short tipidagi s1 o'zgaruvchisini qiymatini 7 ga oshirish " + s1);
 
     // -= operatori
-
     int a2 = 22;
     a2 -= 7;
     System.out.println("a2 -= 7, a2 o'zgaruvchisini qiymatini 7 ga kamaytirish " + a2);
+
+    // *= operatori
+    int a3 = 22;
+    a3 *= 5;
+    System.out.println("a3 *= 5, a3 o'zgaruvchisini qiymatini 5 marta oshirish " + a3);
+
+    // /= operatori
+    int a4 = 36;
+    a4 /= 3;
+    System.out.println("a4 /= 3, a4 o'zgaruvchisini qiymatini 3 marta kamaytirish " + a4);
+
+    // %= operatori
+    int a5 = 28;
+    a5 %= 5;
+    System.out.println("a5 %= 5, a5 o'zgaruvchisini qiymatini 5 ga bo'lgandagi qoldiqni qiymatini o'ziga yuklash " + a5); // 3 chiqadi
 
     }
 }
