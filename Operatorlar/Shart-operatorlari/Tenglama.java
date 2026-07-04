@@ -14,8 +14,8 @@ public class Tenglama{
 
         //tenglamaning koefitsiyaetlarini e'lon qilish
         int A = 1;
-        int B = 3;
-        int C = 22;
+        int B = 5;
+        int C = 4;
 
         if (A != 1){
 
@@ -34,8 +34,8 @@ public class Tenglama{
         //Diskriminant asosida yechimni xisoblash
         if (D > 0){
 
-            double x_1 = (-B - Math.pow(D, 1/2)) / (2 * A);
-            double x_2 = (-B + Math.pow(D, 1/2)) / (2 * A);
+            double x_1 = (-B - Math.pow(D, 1.0 / 2)) / (2 * A);
+            double x_2 = (-B + Math.pow(D, 1.0 / 2)) / (2 * A);
 
             System.out.println("X1 = " + x_1);
             System.out.println("X2 = " + x_2);
