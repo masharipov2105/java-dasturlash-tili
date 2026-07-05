@@ -21,5 +21,17 @@ public class Main{
             System.out.println(xisoblagich + ") " + i);
             xisoblagich ++;
         }
+
+        //berilgan qiymat asosida kamayuvchi sikl qurish
+        int son2 = 10;
+        int xisoblagich2 = 1;
+
+        // i ning qiymati dastlab son2 ga yani biz kiritga songa teng bo'ladi, posfix decrement operatori sababli avval ekranda i ning dastlabki o'zgarmagan qiymati xosl bo'ladi
+        // posfix decrement operatori sabali i nig qiymati har bir takrorlanishda 1 taga kamayib boradi, va oxirida 1 bilan yakunlanadi
+        for (int i = son2; i > 0; i --){
+
+            System.out.println(xisoblagich2 + ") " + i);
+            xisoblagich2 ++;
+        }
     }
 }
