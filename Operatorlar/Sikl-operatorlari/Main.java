@@ -33,5 +33,22 @@ public class Main{
             System.out.println(xisoblagich2 + ") " + i);
             xisoblagich2 ++;
         }
+
+        // sikl ichida sikl xosil qilish ham mumkin, bunda har bir sikl ichidagi mahalliy o'zgaruvchilar nomlari bir xil bo'lmasligi kerak
+
+        int s_1 = 4;
+        int s_2 = 5;
+
+        for (int i = 1; i <= s_1; i ++){
+
+            System.out.print(i + ") ");
+            // sikl ichidagi 2-sikl
+            for (int j = 1; j <= s_2; j ++){
+
+                System.out.print(j + " ");
+            }
+
+            System.out.println();
+        }
     }
 }
