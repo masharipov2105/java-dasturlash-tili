@@ -17,6 +17,7 @@ public class Main{
         int hisobchi = 1;
 
         while (shart){
+
             if (hisobchi < 10){
 
                 System.out.println(hisobchi);
@@ -25,6 +26,27 @@ public class Main{
                 shart = false;
                 //oxirgi iteratsiyda yakuniy qiymatni ham chiqarish kerak
                 System.out.println(hisobchi);
+            }
+        }
+
+        // dastlabki x ta juft sonni chop etish
+        int x = 1;
+        int hisobchi2 = 0;
+        int juft_son = 0;
+        boolean shart2 = true;
+
+        System.out.println(String.format("Dastlabki %d ta juft sonni chop etish", x));
+
+        while (shart2){
+
+            if (hisobchi2 < x){
+
+                juft_son += 2;
+                System.out.println(juft_son);
+                hisobchi2 ++;
+            } else{
+
+                shart2 = false;
             }
         }
     }
