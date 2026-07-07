@@ -20,5 +20,13 @@ public class Main{
             System.out.println(start);
             start ++;
         } while (start <= x);
+
+        // do-while operatori kamida bir marta ishlashini tekshirish
+        boolean shart = false;
+
+        do {
+
+            System.out.println("BU matn ekranda chop etilgan ekan, demak do-while operatori shart=false da ham 1 marta ishladi");
+        } while (shart);
     }
 }
