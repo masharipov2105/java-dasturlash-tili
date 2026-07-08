@@ -12,7 +12,7 @@ public class Main{
     public static void main(String[] args){
 
         //songa mos hafta kunlarini chop etish
-        short kun = 1;
+        byte kun = 1;
 
         switch (kun){
 
@@ -87,5 +87,19 @@ public class Main{
                 System.out.println(amal + " bunday amalni bajara olmayman");
                 break;
         }
+
+        //java 14 + da qo'shilgan yangi sintaksisni ishlatib ko'ramiz
+        // berilgan raqamni tub son ga tekshiradigan dastur tuzamiz
+
+        byte raqam = 7;
+
+        String natija = switch(raqam){
+
+            case 2,3,5,7 -> "tub";
+            case 0,1,4,6,8,9 -> "tub emas";
+            default -> "aniqlay olmayman";
+        };
+
+        System.out.println(raqam + " raqam " + natija);
     }
 }
