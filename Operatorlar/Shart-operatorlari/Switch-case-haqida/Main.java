@@ -49,5 +49,43 @@ public class Main{
                 System.out.println(kun + " haftaning bunday kuni yo'q");
                 break;
         }
+
+        //+, -, *, / amallarini bajaruvchi sodda kalkulator
+
+        int son1 = 18;
+        int son2 = 7;
+        char amal = '/';
+        System.out.println("\n Sodda kalkulator dasturi \n");
+        switch (amal){
+
+            case '+':
+
+                int natija1 = son1 + son2;
+                System.out.println(son1 + " " + amal + " " + son2 + " = " + natija1);
+                break;
+
+            case '-':
+
+                int natija2 = son1 - son2;
+                System.out.println(son1 + " " + amal + " " + son2 + " = " + natija2);
+                break;
+
+            case '*':
+
+                int natija3 = son1 * son2;
+                System.out.println(son1 + " " + amal + " " + son2 + " = " + natija3);
+                break;
+
+            case '/':
+
+                double natija4 = (double)son1 / (double)son2;
+                String natija_ = String.format("%.3f", natija4);
+                System.out.println(son1 + " " + amal + " " + son2 + " = " + natija_);
+                break;
+            default:
+
+                System.out.println(amal + " bunday amalni bajara olmayman");
+                break;
+        }
     }
 }
