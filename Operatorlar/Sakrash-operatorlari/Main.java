@@ -44,5 +44,20 @@ public class Main{
             }
             System.out.println(i);
         }
+
+        // return operatori bilan ilk metodimizni yozib ko'ramiz
+
+        int a = 7;
+        int b = 8;
+        System.out.println(a + " va " + b + " ning yig'indisini hisoblovchi metod natijasi: " + hisobla(a, b));
+    }
+
+    //ikl metodimizni yozamiz hisobla nomli metod
+    public static int hisobla(int son1, int son2){
+
+        // metodni o'zini son1 va son2 parameterlarni yig'indisini return yordamida qaytaradi va metodni to'xtatadi
+        return son1 + son2;
+        //returndan keyingi hech bir kod bajarilmaydi;
+        //returndan keyingi qatrodagi hech bir kod aslo bajarilmaydi jumladan ushbu satr ham ekranga chop etilmaydi
     }
 }
