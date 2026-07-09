@@ -29,5 +29,20 @@ public class Main{
             System.out.println(hisobchi);
             hisobchi ++;
         }
+
+        System.out.println("\nJuft sonlar gineratori\n");
+
+        //berilgan songacga faqat juft sonlarni chiqarish
+        int son2 = 12;
+
+        for (int i = 1; i <= 12;  i++){
+
+            if (i % 2 == 1){
+
+                // agar son toq bo'lsa iteratsiyani tashlab ketish
+                continue;
+            }
+            System.out.println(i);
+        }
     }
 }
