@@ -43,5 +43,12 @@ public class Main{
         }
         // bir probel pastga o'tkazish uchun
         System.out.println();
+
+        // massiv elementlarini qiymatlarini o'zgartirib ko'ramiz
+        int[] sonlar = {12, 14, 15, 17, 20};
+        System.out.println("sonlar massivining 0-elementi dastlab: " + sonlar[0]);
+        sonlar[0] = -2;
+        System.out.println("sonlar massivining 0-elementi keyin: " + sonlar[0]);
+
     }
 }
