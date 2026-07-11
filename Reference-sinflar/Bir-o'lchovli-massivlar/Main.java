@@ -50,5 +50,37 @@ public class Main{
         sonlar[0] = -2;
         System.out.println("sonlar massivining 0-elementi keyin: " + sonlar[0]);
 
+        // sonli massiv elementarini o'sish tartibida qayta tartiblaydigan dastur yozib ko'ramiz
+
+        int[] son_massiv = {7, 6, 13, -4, -7, -2, 0, 22, 9};
+
+        System.out.print("son_massiv dastlab: ");
+        for (int son : son_massiv){
+
+            System.out.print(son + " ");
+        }
+        System.out.println();
+        for (int i = 0; i < son_massiv.length - 1; i ++){
+
+            for (int j = 0; j < son_massiv.length - 1; j ++){
+
+                int max_element = son_massiv[j];
+                int min_element = son_massiv[j + 1];
+
+                if (max_element > min_element){
+
+                    son_massiv[j] = son_massiv[j + 1];
+                    son_massiv[j + 1] = max_element;
+                }
+            }
+        }
+
+        System.out.print("son_massiv keyin: ");
+
+        for (int son : son_massiv){
+
+            System.out.print(son + " ");
+        }
+        System.out.println();
     }
 }
