@@ -52,21 +52,25 @@ public class Main{
 
         // sonli massiv elementarini o'sish tartibida qayta tartiblaydigan dastur yozib ko'ramiz
 
+        // son_massiv nomli yangi massiv xosil qilamiz, uzunligi ixtiyoriy bo'lgan int massivi
         int[] son_massiv = {7, 6, 13, -4, -7, -2, 0, 22, 9};
 
+        //massivning dastlabki xolatini chop etamiz for-eich sikli yordamida
         System.out.print("son_massiv dastlab: ");
         for (int son : son_massiv){
 
             System.out.print(son + " ");
         }
         System.out.println();
-        for (int i = 0; i < son_massiv.length - 1; i ++){
 
+        // ikkitalik for siklini tashkil qilamiz  har bir bosqichda qadammaq adam katta elemetni oldinga kichigini orqaga o'tkazadi
+        for (int i = 0; i < son_massiv.length - 1; i ++){
+            // har gal j-eleemt bilan uni yonidagi yani j+1 elemetni katta-kichiklikka tekshiirb o'rinlarini almashtiradi
             for (int j = 0; j < son_massiv.length - 1; j ++){
 
                 int max_element = son_massiv[j];
                 int min_element = son_massiv[j + 1];
-
+                // aynan shu shart ichida o'sha j av j+1 eleetlar tekshiriladi agar shartga mos tushsa elemetlar o'rinlari almashtirladi
                 if (max_element > min_element){
 
                     son_massiv[j] = son_massiv[j + 1];
@@ -75,6 +79,7 @@ public class Main{
             }
         }
 
+        // sikl tugagach yakuniy ko'risnishga kelgan son_massivi chop etiladi o'zgarishni ko'rish uchun
         System.out.print("son_massiv keyin: ");
 
         for (int son : son_massiv){
