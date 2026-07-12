@@ -21,5 +21,9 @@ public class Main{
         // ikki o'lchovli massivning elementini chop etish
         System.out.println("massivning [0][1] elementi: " + massiv_2x[0][1]);
 
+        // ikki o'lchovli massivning biror elementini qiymatini o'zgartiramiz
+        System.out.println("massivning [2][0] elementining dastlabki qiymati: " + massiv_2x[2][0]); // 5
+        massiv_2x[2][0] = 77;
+        System.out.println("massivning [2][0] elementining keyingi qiymati: " + massiv_2x[2][0]); // 77
     }
 }
