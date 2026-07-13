@@ -16,6 +16,11 @@ public class Main{
         salomlash();
         int bizning_son = 12;
         System.out.println(bizning_son + " sonining kvadrati: " + kvadratXisobla(bizning_son));
+
+        double t_boyi = 12.5;
+        double t_eni = 8.865;
+        System.out.printf("bo'yi " + t_boyi + ", eni " + t_eni + " to'rtburchak yuzasi: %.3f", yuzaniTop(t_boyi, t_eni));
+        System.out.println();
     }
 
 
@@ -25,6 +30,7 @@ public class Main{
         System.out.println("Assalomu aleykum");
     }
 
+    // argumet sifatida berilgan butun soning kvadratini xisoblab natijani qaytaruvchi metod
     public static int kvadratXisobla(int son){
 
         // metod ichida ham o'zgaruvchi yaratish mumkin va istagancha
@@ -33,5 +39,13 @@ public class Main{
 
         // natija o'zgaruvchisini metodni qiymati sifatida return operatori yordamida qaytaramiz
         return natija;
+    }
+
+    // kasr sonda ifodalangan va argument sifatida taqdim etilgan sonlar asosida to'rtburchak yuzasini xisoblab qaytaruvchi metod
+    public static double yuzaniTop(double boyi, double eni){
+
+        double yuza = boyi * eni;
+
+        return yuza;
     }
 }
