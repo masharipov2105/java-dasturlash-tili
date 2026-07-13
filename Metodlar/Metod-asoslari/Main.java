@@ -24,6 +24,9 @@ public class Main{
 
         String user_ism = "Masharipov";
         ismniQaytar(user_ism);
+
+        int son = 200;
+        System.out.println(son + " son juftmi? " + juftMi(son));
     }
 
 
@@ -56,5 +59,17 @@ public class Main{
     public static void ismniQaytar(String ism){
 
         System.out.println(String.format("Salom, %s", ism));
+    }
+
+    public static boolean juftMi(int son){
+
+        boolean natija = false;
+
+        if (son % 2 == 0){
+
+            natija = true;
+        }
+
+        return natija;
     }
 }
