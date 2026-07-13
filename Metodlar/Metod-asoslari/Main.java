@@ -21,6 +21,9 @@ public class Main{
         double t_eni = 8.865;
         System.out.printf("bo'yi " + t_boyi + ", eni " + t_eni + " to'rtburchak yuzasi: %.3f", yuzaniTop(t_boyi, t_eni));
         System.out.println();
+
+        String user_ism = "Masharipov";
+        ismniQaytar(user_ism);
     }
 
 
@@ -47,5 +50,11 @@ public class Main{
         double yuza = boyi * eni;
 
         return yuza;
+    }
+
+    // argument sifatida berilgan ismga salom beruvchi metod yozib ko'ramiz
+    public static void ismniQaytar(String ism){
+
+        System.out.println(String.format("Salom, %s", ism));
     }
 }
