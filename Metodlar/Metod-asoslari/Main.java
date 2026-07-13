@@ -14,6 +14,8 @@ public class Main{
 
         // yaartgan metodimizni chaqiramiz
         salomlash();
+        int bizning_son = 12;
+        System.out.println(bizning_son + " sonining kvadrati: " + kvadratXisobla(bizning_son));
     }
 
 
@@ -21,5 +23,15 @@ public class Main{
     public static void salomlash(){
 
         System.out.println("Assalomu aleykum");
+    }
+
+    public static int kvadratXisobla(int son){
+
+        // metod ichida ham o'zgaruvchi yaratish mumkin va istagancha
+        // natija nomli o'zgaruvchi yaratib unga parametrdagi son o'zgaruvchisini o'zini o'ziga ko'paytirgandagi qiymatni tayinladik
+        int natija = son * son;
+
+        // natija o'zgaruvchisini metodni qiymati sifatida return operatori yordamida qaytaramiz
+        return natija;
     }
 }
