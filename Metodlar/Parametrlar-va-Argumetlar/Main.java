@@ -32,6 +32,18 @@ public class Main{
 
         System.out.printf(d_1 + ", " + d_2 + ", " + d_3 + ", " + d_4 + " larning yig'indisi: %.4f", doubleYigindi(d_1, d_2, d_3, d_4));
         System.out.println(); // shunchaki yangi satrga o'tish uchun
+
+        // o'zgaruvchi qiymatini metod yordamida o'zgartirishga urnib ko'rmiz, bu o'zgarish metod tashqarisida ham o'rinli bo'ladimi?
+        int oddiy_son = 12;
+        System.out.println("int tipidagi 'oddiy_son' nomli o'zgaruvchining dastlabki qiymati: " + oddiy_son);
+        qiymatOzgartir(oddiy_son); // metodni chaqirdik va o'zgaruvchini qiymatini o'zgartirishga urinamiz
+        System.out.println("int tipidagi 'oddiy_son' nomli o'zgaruvchinin metodni chaqirgandan keyingi qiymati: " + oddiy_son);
+        // immutable turlarning qiymatiin metod yordamida o'zgartirib bo'lmaydi chunki har safar yangi obekt yaratiladi
+        int[] sonli_massiv = new int[]{12, 13, 15};
+        System.out.println("sonli_massiv ning 1-element qiymati (dastlab): " + sonli_massiv[1]);
+        elementOzgartir(sonli_massiv, 1);
+        System.out.println("sonli_massiv ning 1-elemeti metod chaqirilgandan keyingi qiymati: " + sonli_massiv[1]); // 0 ni chop etishi kerak
+        // mutable turlari asosida yaratilgan obektlarni metodlar yordamida qiymatini o'zgartieish metodlar tashqarisida ham o'rinli bo'lar ekan
     }
 
     // 3ta int tipidagi sonlarni o'rta rifmetigini qaytaruvchi metod
@@ -56,5 +68,18 @@ public class Main{
         double yigindi = (son1 + son2 + son3 + son4);
 
         return yigindi;
+    }
+
+    // metod ichida parametr qiymatini o'zgartirb ko'ramiz yani argumetni, bu metoddan tashqarida ham o'rinli bo'ladimi?
+    public static void qiymatOzgartir(int son){
+
+        // parametr qiymatini o'zgartiramiz
+        son += 10;
+    }
+
+    // masivni berilgan indexsidagi elementini qiymatini o'zgartiruvchi metod
+    public static void elementOzgartir(int[] mass, int index){
+
+        mass[index] = 0;
     }
 }
