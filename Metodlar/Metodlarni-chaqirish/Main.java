@@ -21,7 +21,7 @@ public class Main{
         // ikkita son ustda oddiy 4ta rifmetik amalni bajaradigan metdlarni yaratib bir birining ichida chaqiramiz
         int son1 = 16;
         int son2 = 5;
-        hisoblash(son1, son2);
+        hisoblash(son1, son2); //hisoblash metodini chaqirdik va ishga tushmoqda
     }
 
     public static void metod1(){
@@ -44,27 +44,31 @@ public class Main{
         System.out.println("metod3 nihoyasiga yetdi");
     }
 
+    // hisoblash metodi o'z ichida yig'indisni hisoblaydi va natijani chop etib keyin ayirish metodini chaqiradi
     public static void hisoblash(int a, int b){
 
         int natija = a + b;
         System.out.println(a + " + " + b + " = " + natija);
-        ayirish(a, b);
+        ayirish(a, b); //ayirish metodini chaqirish
     }
 
+    // ayirish metodi o'z ichida ayirish amalini bajarib natijani chop etadi va kopaytirish metodini chaqiradi
     public static void ayirish(int s1, int s2){
 
         int natija = s1 - s2;
         System.out.println(s1 + " - " + s2 + " = " + natija);
-        kopaytirish(s1, s2);
+        kopaytirish(s1, s2); //kopaytirish metodini chaqirish
     }
 
+    // kopaytirish metodi o'z ichida ko'paytirish amalini bajaradi va natijano chop etib bo'lish metodini chaqiradi
     public static void kopaytirish(int son_1, int son_2){
 
         int natija = son_1 * son_2;
         System.out.println(son_1 + " * " + son_2 + " = " + natija);
-        bolish(son_1, son_2);
+        bolish(son_1, son_2); // bolish metodini chaqirish
     }
 
+    // bolish metodi ichida bo'lish amalini bajaradi va natijani chop etadi va eng birinchi bo'lib yakunlanadi
     public static void bolish(int n1, int n2){
 
         double natija = ((double)n1) / n2;
