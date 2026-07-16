@@ -41,7 +41,8 @@ public class Main{
         // metodni chaqirgandan keyin argumetga (,) vergul bilan ajratilgan xolda istalgancha butun son kiritish mumkin
         System.out.println("dastlabki 10ta natural sonlar yigindisi allSum(1, 2, 3, 4, 5, 6, 7, 8, 9, 10): " + allSum(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)); // 55
 
-
+        // varargs parametri bilan String tipidagi bir qancha matnlarni birlashtirib ko'ramiz
+        System.out.println("istalgancha String tipidagi matnanri birlashtirish: concatAll('Salom', 'mening', 'ismim', 'Asadbek'): " + concatAll("Salom", "mening", "ismim", "Asadbek"));
     }
     // ikki parametrli overloadign qilingan metod
     public static int kopaytirish(int son_1, int son_2){
@@ -98,5 +99,17 @@ public class Main{
             yigindi += i;
         }
         return yigindi;
+    }
+
+    // Varargs parametiga ega concatAll nomli metod, String tipidagi barcha matnlarni birlashtirb qaytaradi
+    public static String concatAll(String... sozlar){
+
+        String natija = "";
+
+        for(String s : sozlar){
+
+            natija = natija + s + " ";
+        }
+        return natija;
     }
 }
