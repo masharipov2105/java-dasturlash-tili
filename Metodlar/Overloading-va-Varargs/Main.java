@@ -43,6 +43,14 @@ public class Main{
 
         // varargs parametri bilan String tipidagi bir qancha matnlarni birlashtirib ko'ramiz
         System.out.println("istalgancha String tipidagi matnanri birlashtirish: concatAll('Salom', 'mening', 'ismim', 'Asadbek'): " + concatAll("Salom", "mening", "ismim", "Asadbek"));
+
+        // varargs parametriga ega va overloadign qilingan bir nechta metodlarni yozib, sinab ko'ramiz
+        // asosiy qoida varargs parametri metod parametrlari ichida eng oxirida turishi kerak
+        // multiply nomli metod yozamiz yani sonlarni ko'paytiruvchi metod va uni overloading qilamiz
+
+        System.out.println("int tipidagi butun sonlarni ko'paytiradi, multiply(1, 2, 3, 4, 5, 6): " + multiply(1, 2, 3, 4, 5));
+        System.out.println("String tipidagi mant ko'rinishidagi sonlarni ko'paytirish, multiply('1', '2', '3', '4', '5', '6'): " + multiply("1", "2", "3", "4", "5", "6"));
+
     }
     // ikki parametrli overloadign qilingan metod
     public static int kopaytirish(int son_1, int son_2){
@@ -94,7 +102,7 @@ public class Main{
 
         int yigindi = 0;
 
-        for(int i : sonlar){
+        for (int i : sonlar){
 
             yigindi += i;
         }
@@ -106,9 +114,33 @@ public class Main{
 
         String natija = "";
 
-        for(String s : sozlar){
+        for (String s : sozlar){
 
             natija = natija + s + " ";
+        }
+        return natija;
+    }
+
+    // int tipidagi varargs parametriga ega barcha argumetlarni ko'paytirib natijani qaytaradi
+    public static int multiply(int... sonlar){
+
+        int natija = 1;
+
+        for (int s : sonlar){
+
+            natija *= s;
+        }
+        return natija;
+    }
+
+    // Strint tipidagi varargs parametriga ega barcha argumetlarini ko'paytirb natijani qaytaradi
+    public static int multiply(String... satrlar){
+
+        int natija = 1;
+
+        for (String s : satrlar){
+
+            natija *= Integer.parseInt(s);
         }
         return natija;
     }
