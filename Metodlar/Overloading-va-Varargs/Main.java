@@ -37,6 +37,11 @@ public class Main{
         System.out.println(String.format("double %.3f, double %.3f qoshish metodini chaqiramiz: " + qoshish(s_1, s_2), s_1, s_2));
         System.out.println(String.format("String %s, String %s, qoshish metodini chaqiramiz: " + qoshish(str_1, str_2), str_1, str_2));
 
+        // varargs parametridan foydalanishga oddiy misol
+        // metodni chaqirgandan keyin argumetga (,) vergul bilan ajratilgan xolda istalgancha butun son kiritish mumkin
+        System.out.println("dastlabki 10ta natural sonlar yigindisi allSum(1, 2, 3, 4, 5, 6, 7, 8, 9, 10): " + allSum(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)); // 55
+
+
     }
     // ikki parametrli overloadign qilingan metod
     public static int kopaytirish(int son_1, int son_2){
@@ -81,5 +86,17 @@ public class Main{
         String natija_yakuniy = String.valueOf(natija);
 
         return natija_yakuniy;
+    }
+
+    // Varargs parametriga ega allSum nomli metod, baracha parametrlar yig'indisini qaytaradi
+    public static int allSum(int... sonlar){
+
+        int yigindi = 0;
+
+        for(int i : sonlar){
+
+            yigindi += i;
+        }
+        return yigindi;
     }
 }
