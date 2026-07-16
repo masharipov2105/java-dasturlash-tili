@@ -51,6 +51,11 @@ public class Main{
         System.out.println("int tipidagi butun sonlarni ko'paytiradi, multiply(1, 2, 3, 4, 5, 6): " + multiply(1, 2, 3, 4, 5));
         System.out.println("String tipidagi mant ko'rinishidagi sonlarni ko'paytirish, multiply('1', '2', '3', '4', '5', '6'): " + multiply("1", "2", "3", "4", "5", "6"));
 
+        // varargs parametrli metod bilan massiv parametrli metodni ishlatishni solishtirib ko'ramiz
+        // sonlarni yig'indisini xisoblovchi metodni overloading qilamiz va parametrlarini birini varargs birini massiv qilamiz
+        System.out.println("sonlar yig'indisi String varargs parametri orqali: summ(1, 2, 3, 4): " + summ(1, 2, 3, 4));
+        System.out.println("sonlar yig'indisi String massiv parametri orqali: sunn(new int[]{1, 2, 3, 4}): " + summ(new String[]{"1", "2", "3", "4"}));
+
     }
     // ikki parametrli overloadign qilingan metod
     public static int kopaytirish(int son_1, int son_2){
@@ -144,4 +149,28 @@ public class Main{
         }
         return natija;
     }
+
+    // int tipidagi varargs parametri yordmida sonlar yig'indisini qaytaradi
+    public static int summ(int... sonlar){
+
+        int natija = 0;
+
+        for (int i : sonlar){
+
+            natija += i;
+        }
+        return natija;
+    }
+
+    public static int summ(String[] son_mass){
+
+        int natija_ = 0;
+
+        for (String i : son_mass){
+
+            natija_ += Integer.parseInt(i);
+        }
+        return natija_;
+    }
 }
+
