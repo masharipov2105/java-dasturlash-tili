@@ -15,7 +15,13 @@ public class Main{
         // void tipidagi metod bilan 1-variantni ko'ramiz
         int son = 5;
         faktorial_hisobchi(son, 0, 1); // void tipidagi metod qiymat qaytarmaydi va natija metod ichida chop etiladi
-        System.out.println(String.format("%d! = %d", son, faktorial_hisobchi(son)));
+        System.out.println(String.format("%d! = %d", son, faktorial_hisobchi(son))); // int tipida natijani qaytaradigan rekursiv metod
+
+        // sonning darajasini rekursiya yordamida hisoblaydigan metod yozib ko'ramiz
+        int son_1 = 2;
+        int daraja = 5;
+        daraja(son_1, daraja, daraja-1, son_1); // void tipidagi natijani metod ichida chop etuvchi rekursiv metod
+        System.out.println(String.format("%d^%d = %d", son_1, daraja, daraja(son_1, daraja))); // natijani int tipida qaytaradigan rekursiv metod
     }
 
     // sonlarni ketma ket ko'paytirb natijani xisoblab boruvchi rekursiv metod
@@ -41,7 +47,41 @@ public class Main{
             return 1;
         } else{
 
-            return finish * faktorial_hisobchi(finish-1);
+            return finish * faktorial_hisobchi(finish-1); // har bir o'zini chaqirish vatida oxirgi o'zini chaqirishgacha bu return natija sifatida qaytarilmasdan kutadi
+        }
+    }
+
+    // void tipidagi natijani ichida chop etuvchi rekursiv metod
+    public static void daraja(int son, int daraja, int hisob, int jarayon){
+
+        int natija = jarayon;
+
+        if (daraja == 0){
+            natija = 1;
+            System.out.println(String.format("%d^%d = %d", son, daraja, natija));
+        } else{
+
+            if (hisob == 0){
+
+                System.out.println(String.format("%d^%d = %d", son, daraja, natija));
+            } else{
+
+                int args = hisob - 1;
+                natija = natija * son;
+                daraja(son, daraja, args, natija);
+            }
+        }
+    }
+
+    // int tipida natijani qaytaradigan rekursiv metod
+    public static int daraja (int son, int daraja){
+
+        if (daraja == 0){
+
+            return 1;
+        } else{
+
+            return son * daraja(son, daraja-1);
         }
     }
 }
