@@ -28,8 +28,32 @@ class Kompyuter{
     byte tezkor_xotira_turi = 4; // standart ravishda DDR4
     short doimiy_xotira = 128; // standart ravishda 128 GB (eng minimal SSD yoki HDD)
     short tezkor_xotira = 8; // standart ravishda 8GB
-    short tamimot_blok_quvvati = 600; // standart ravishda 600W
+    short taminot_blok_quvvati = 600; // standart ravishda 600W
     boolean video_karta_bormi = false; // standaet ravishda yo'q;
     String video_karta_modeli = "nomalum"; //standart ravishda nomalum
+
+    // konstruktor yasaymiz va obektni initializatsiya vaqitda ilk parametr qiymatlarini xusiaytlarga tayinlaymiz
+    public Kompyuter(
+        String tip_,
+        String model_,
+        String protsessor_,
+        String xotira_rom_type,
+        byte xotira_ram_type,
+        byte xotira_rom,
+        short xotira_ram,
+        short taminot,
+        boolean isVideoCard,
+        String video_karta
+    ){
+        this.tip = tip_;
+        this.model = model_;
+        this.protsessor = protsessor_;
+        this.doimiy_xotira_turi = xotira_rom_type;
+        this.doimiy_xotira = xotira_rom;
+        this.tezkor_xotira = xotira_ram;
+        this.taminot_blok_quvvati = taminot;
+        this.video_karta_bormi = isVideoCard;
+        this.video_karta_modeli = video_karta;
+    }
 }
 
