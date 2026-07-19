@@ -55,5 +55,35 @@ class Kompyuter{
         this.video_karta_bormi = isVideoCard;
         this.video_karta_modeli = video_karta;
     }
+
+    // kompyuterning joriy xarkteristikaini chop etish uchun instance info nomli metod yaratamiz, parametrlari yo'q
+    public String info(){
+
+        String yakuniy_xolat = "";
+
+        // video karta mavjud bo'lmagan xolat uchun dastlabki qiymatlarni tayinladik
+        String p8 = String.format("Video karta mavjudligi: %s \n", "mavjud emas");
+        String p9 = String.format("Video karta modeli: %s \n", "mavjud emas");
+
+        String ramka = String.format("================= %s =================\n", this.model);
+        String p1 = String.format("Turi: %s \n", this.tip);
+        String p2 = String.format("Kompyuter protsessori (CPU): %s \n", this.protsessor);
+        String p3 = String.format("Doimiy xotira turi (ROM) %s \n", this.doimiy_xotira_turi);
+        String p4 = String.format("Doimiy xotira hajmi (GB): %d GB \n", this.doimiy_xotira);
+        String p5 = String.format("Tezkor xotira turi: DDR%d \n", this.tezkor_xotira_turi);
+        String p6 = String.format("Tezkor xotira hajmi (GB): %d \n", this.tezkor_xotira);
+        String p7 = String.format("Taminot bloki quvvati: %d \n", this.taminot_blok_quvvati);
+        String ramka_oxiri = "======================================\n";
+        // agar video karta mavjud bo'lsa konstruktordagi qiymatlarni tayinlaymiz
+        if (this.video_karta_bormi){
+
+            p8 = String.format("Video karta mavjudligi: %s \n", "mavjud");
+            p9 = String.format("Video karta modeli: %s \n", this.video_karta_modeli);
+        }
+
+        yakuniy_xolat = (ramka + p1 + p2 + p3 + p4 + p5 + p6 + p7 + p8 + p9 + ramka_oxiri);
+
+        return yakuniy_xolat;
+    }
 }
 
