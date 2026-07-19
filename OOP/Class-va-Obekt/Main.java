@@ -12,6 +12,9 @@ public class Main{
 
     public static void main(String[] args){
 
+        // Kompuyter sinfidan foydalanib yangi obekt yaratamiz va info metodidan foydlaanib jotiy holatini chop etamiz
+        Kompyuter pc_1 = new Kompyuter("Tizimli blok", "Dell Vostro 3888", "Intel® Core™ i5-10400", "HDD",(byte)4, (short)1024, (short)8, (short)500, true, "NVIDIA GeForce RTX 3050 8 GB");
+        System.out.println(pc_1.info()); // kompyuterimiozning xolatini chop etish instance info metodi bilan
     }
 }
 
@@ -39,7 +42,7 @@ class Kompyuter{
         String protsessor_,
         String xotira_rom_type,
         byte xotira_ram_type,
-        byte xotira_rom,
+        short xotira_rom,
         short xotira_ram,
         short taminot,
         boolean isVideoCard,
@@ -65,13 +68,13 @@ class Kompyuter{
         String p8 = String.format("Video karta mavjudligi: %s \n", "mavjud emas");
         String p9 = String.format("Video karta modeli: %s \n", "mavjud emas");
 
-        String ramka = String.format("================= %s =================\n", this.model);
+        String ramka = String.format("\n================= %s =================\n", this.model);
         String p1 = String.format("Turi: %s \n", this.tip);
         String p2 = String.format("Kompyuter protsessori (CPU): %s \n", this.protsessor);
         String p3 = String.format("Doimiy xotira turi (ROM) %s \n", this.doimiy_xotira_turi);
         String p4 = String.format("Doimiy xotira hajmi (GB): %d GB \n", this.doimiy_xotira);
         String p5 = String.format("Tezkor xotira turi: DDR%d \n", this.tezkor_xotira_turi);
-        String p6 = String.format("Tezkor xotira hajmi (GB): %d \n", this.tezkor_xotira);
+        String p6 = String.format("Tezkor xotira hajmi (GB): %d GB \n", this.tezkor_xotira);
         String p7 = String.format("Taminot bloki quvvati: %d \n", this.taminot_blok_quvvati);
         String ramka_oxiri = "======================================\n";
         // agar video karta mavjud bo'lsa konstruktordagi qiymatlarni tayinlaymiz
