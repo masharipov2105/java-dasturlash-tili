@@ -12,6 +12,14 @@ public class Main{
 
     public static void main(String[] args){
 
+        //BankHisobi sinfi yordmida yangi obket yaratamiz va uni userName xususiyatiga to'g'ridan to'g'ri murojaatni ko'ramiz
+        BankHisobi user_1 = new BankHisobi("Alisher Valiev",12218765, 1270650.80, "1987-17-08");
+
+        //userName xususiyatiga metodsiz to'g'idan to'g'ri murojjatni amalga oshirishga urinamiz;
+        //System.out.println("Username = " + user_1.userName); xatolik: userName is private
+
+        //userName qiymatini standart getter metodi bilan olishga urinamiz
+        System.out.println("Username: " + user_1.getUserName());
     }
 }
 
@@ -32,5 +40,18 @@ class BankHisobi{
         this.accountNumber = account_number;
         this.balanse = balanse_;
         this.userBirthDay = user_birth_day;
+    }
+
+    public void setUserName(String newName){
+
+        if (!newName.isEmpty()){
+
+            this.userName = newName;
+        }
+    }
+
+    public String getUserName(){
+
+        return this.userName;
     }
 }
