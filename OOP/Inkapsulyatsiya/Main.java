@@ -21,8 +21,16 @@ public class Main{
 class BankHisobi{
 
     // Bank Hisobi obektining xususiyatlarini yaratamiz
-    private String userName;
-    private int accountNumber;
-    private double balanse;
-    private String userBirtDay;
+    private String userName = "unknown";
+    private int accountNumber = 0;
+    private double balanse = 0.0;
+    private String userBirthDay = "0000-00-00";
+
+    public BankHisobi(String user_name, int account_number, double balanse_, String user_birth_day){
+
+        this.userName = user_name;
+        this.accountNumber = account_number;
+        this.balanse = balanse_;
+        this.userBirthDay = user_birth_day;
+    }
 }
