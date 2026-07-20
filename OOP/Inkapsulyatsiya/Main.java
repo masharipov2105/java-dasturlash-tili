@@ -19,7 +19,13 @@ public class Main{
         //System.out.println("Username = " + user_1.userName); xatolik: userName is private
 
         //userName qiymatini standart getter metodi bilan olishga urinamiz
-        System.out.println("Username: " + user_1.getUserName());
+        System.out.println("dastlab Username: " + user_1.getUserName());
+
+        //userName ni setUserName setter metodi bilan o'zgartirishga urinamiz
+        user_1.setUserName("Rustam G'aniev");
+
+        //userName qiymati o'zgarishidan keyingi xolatni chop etib ko'ramiz
+        System.out.println("keyin UserName: " + user_1.getUserName());
     }
 }
 
