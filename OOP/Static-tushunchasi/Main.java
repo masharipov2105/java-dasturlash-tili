@@ -27,6 +27,10 @@ public class Main{
         // endi yana bir bor talabalar sonini ko'ramiz
         System.out.println("Joriy talabalar soni (keyin): " + Talaba.getTalabalarSoni()); // 1 taga oshgan bo'lishi kerak
 
+        // qogan getter/setter metodlarni tekshiramiz
+        // talab_1ning ismi bo'zgartirib ko'ramiz
+        talaba_1.setIsm("Doniyor");
+        System.out.println(String.format("%s, baho: %d", talaba_1.getIsm(), talaba_1.getBaho()));
     }
 }
 
