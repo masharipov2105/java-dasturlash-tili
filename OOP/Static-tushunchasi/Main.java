@@ -31,6 +31,17 @@ public class Main{
         // talab_1ning ismi bo'zgartirib ko'ramiz
         talaba_1.setIsm("Doniyor");
         System.out.println(String.format("%s, baho: %d", talaba_1.getIsm(), talaba_1.getBaho()));
+
+        // yangi talabalar
+        Talaba talaba_2 = new Talaba("Shuxrat", 5);
+        Talaba talaba_3 = new Talaba("Roziya", 5);
+        Talaba talaba_4 = new Talaba("Temurbek", 5);
+        Talaba talaba_5 = new Talaba("Charos", 4);
+
+        // mavjud talabalrning o'rtacha bahosi
+        System.out.println("\nJami talabalar soni: " + Talaba.getTalabalarSoni());
+        // o'rtacha baho
+        System.out.println("Talabalrning o'rtacha bahosi: " + Talaba.getBahoOrtaArifmetik());
     }
 }
 
@@ -45,12 +56,14 @@ class Talaba{
     // static xusuiyatlar, hamma talaba uchun bir xil
     public static String OTM;
     public static int talabalarSoni;
+    private static int baholar;
 
     // static kod bloki yordamida static xusuiatlarga dastlabki qiymatlarni tayinlaymiz
     static {
 
         OTM = "TATUNF";
         talabalarSoni = 0;
+        baholar = 0;
     }
 
     // konstriktorni shakllantiramiz
@@ -59,6 +72,7 @@ class Talaba{
         // this yordamida instanse xusuiatlarga qiymatni konstruktor parametri orqali tayinlaymiz
         this.ism = ism_;
         this.baho = baho_;
+        baholar += baho_;
         // har gal yangi talaba qo'shilganda talabalr_soni 1 taga ortishi kerak
         talabalarSoni ++;
     }
@@ -94,5 +108,13 @@ class Talaba{
     public static String getOtm(){
 
         return OTM;
+    }
+
+    // barcha talabalrning o'rtacha bahosini qaytaruvchi static metod yozib ko'ramiz
+    public static double getBahoOrtaArifmetik(){
+
+        double natija = ((double)baholar)/talabalarSoni;
+
+        return natija;
     }
 }
