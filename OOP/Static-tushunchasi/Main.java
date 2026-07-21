@@ -35,4 +35,12 @@ class Talaba{
         OTM = "TATUNF";
         talabalar_soni = 0;
     }
+
+    // konstriktorni shakllantiramiz
+    public Talaba(String ism_, int baho_){
+
+        // this yordamida instanse xusuiatlarga qiymatni konstruktor parametri orqali tayinlaymiz
+        this.ism = ism_;
+        this.baho = baho_;
+    }
 }
