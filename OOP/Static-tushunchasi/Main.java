@@ -27,13 +27,13 @@ class Talaba{
 
     // static xusuiyatlar, hamma talaba uchun bir xil
     public static String OTM;
-    public static int talabalar_soni;
+    public static int talabalarSoni;
 
     // static kod bloki yordamida static xusuiatlarga dastlabki qiymatlarni tayinlaymiz
     static {
 
         OTM = "TATUNF";
-        talabalar_soni = 0;
+        talabalarSoni = 0;
     }
 
     // konstriktorni shakllantiramiz
@@ -42,5 +42,40 @@ class Talaba{
         // this yordamida instanse xusuiatlarga qiymatni konstruktor parametri orqali tayinlaymiz
         this.ism = ism_;
         this.baho = baho_;
+        // har gal yangi talaba qo'shilganda talabalr_soni 1 taga ortishi kerak
+        talabalarSoni ++;
+    }
+
+    // ism xususiati uchun getter (instanse metod)
+    public String getIsm(){
+
+        return this.ism;
+    }
+
+    // ism xususiati uchun setter (instanse metod)
+    public void setIsm(String yangiIsm){
+
+        if (!yangiIsm.isEmpty()){
+
+            this.ism = yangiIsm;
+        }
+    }
+
+    // bahoni ko'rish uchun getBaho getter (instance metod)
+    public int getBaho(){
+
+        return this.baho;
+    }
+
+    // talabalar sonini ko'rish uchun getTalabalarSoni getter (static metod)
+    public static int getTalabalarSoni(){
+
+        return talabalarSoni;
+    }
+
+    // OTM nomini ko'rish uchun getOtm getter (static metod)
+    public static String getOtm(){
+
+        return OTM;
     }
 }
