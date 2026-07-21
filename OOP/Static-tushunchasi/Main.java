@@ -14,6 +14,19 @@ public class Main{
 
     public static void main(String[] args){
 
+        // Talab sinfining static metodlarini ishlashini tekshiramiz
+        // talabalr sonini hech qanday obekt yaratmasdan qancha ekanligini ko'ramiz
+        System.out.println("Joriy talabalar soni (datlab): " + Talaba.getTalabalarSoni()); // dastlab 0 ta bo'lishi kerak
+
+        // OTM nomini ko'rish, hech qanday obekt yaratmasdan, to'g'ri sinfning o'zi orqali, static metodi yordamida
+        System.out.println("OTM nomi: " + Talaba.getOtm());
+
+        // Yangi Talaba obektini yaratamiz
+        Talaba talaba_1 = new Talaba("Alisher", 4); // Ismi Alisher va bahosi 4;
+
+        // endi yana bir bor talabalar sonini ko'ramiz
+        System.out.println("Joriy talabalar soni (keyin): " + Talaba.getTalabalarSoni()); // 1 taga oshgan bo'lishi kerak
+
     }
 }
 
