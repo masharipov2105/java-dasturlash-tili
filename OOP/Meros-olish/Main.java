@@ -12,6 +12,22 @@ public class Main{
 
     public static void main(String[] args){
 
+        //Transport super classini ishlashini sinab barcha metodlarini tekshirib ko'ramiz
+
+        Transport tr_1 = new Transport("Kema", 100, 400, "moviy");
+        // dastlabki xolati
+        String xolat = String.format("\ntr_1: Dastlab    \nTur: %s\nMax_tezlik: %d\nYo'lovchilar_soni: %d\nRangi: %s\n", tr_1.getNom(), tr_1.getMaxTezlik(), tr_1.getYolovchiSoni(), tr_1.getRang());
+        System.out.println(xolat);
+
+        // qiymatlarni yangilash, setter test
+        tr_1.setNom("Velosiped");
+        tr_1.setMaxTezlik(45);
+        tr_1.setYolovchiSoni(2);
+        tr_1.setRang("qora");
+
+        String xolat2 = String.format("\ntr_2: Keyin    \nTur: %s\nMax_tezlik: %d\nYo'lovchilar_soni: %d\nRangi: %s\n", tr_1.getNom(), tr_1.getMaxTezlik(), tr_1.getYolovchiSoni(), tr_1.getRang());
+        System.out.println(xolat2);
+
     }
 }
 
