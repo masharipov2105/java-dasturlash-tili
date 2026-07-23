@@ -129,5 +129,22 @@ class Transport{
     }
 // ------------------------------------------------------------
 
+    // Avtomabil nomli subclass yaratamiz Transport super classidan meros olamiz
+    class Avtomabil extends Transport{
+
+        // o'ziga xos bo'lgan xusuiatlarni tayinlaymiz
+        private String brend = "nomalum";
+        private boolean dizelmi = false; // true bo'lsa dizel false bo'lsa benzin
+        private boolean elektromabilmi = false; // true bo'lsa ha false yo'q
+
+        // konstruktorni yaratamiz super yordmida qolgan umumiy xusuiatlarni tayinlaymiz
+        public Avtomabil(String nom_, int max_tezlik_, int yolovchi_soni_, String rang_, String brend_, boolean dizelmi_, boolean elektromabilmi_){
+
+            super(nom_, max_tezlik_, yolovchi_soni_, rang_);
+            this.brend = brend_;
+            this.dizelmi = dizelmi_;
+            this.elektromabilmi = elektromabilmi_;
+        }
+    }
 
 }
