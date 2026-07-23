@@ -45,4 +45,73 @@ class Transport{
         this.rang = rang_;
     }
 
+// ------------------------------------------------------------
+
+    //getter/setter larni sozlash
+    public String getNom(){
+
+        return this.nom;
+    }
+
+    public void setNom(String yangiNom){
+
+        if (!yangiNom.isEmpty()){
+
+            this.nom = yangiNom;
+        } else{
+
+            System.out.println("Nom bo'sh bo'la olmaydi");
+        }
+    }
+// ------------------------------------------------------------
+
+    public int getMaxTezlik(){
+
+        return this.maxTezlik;
+    }
+
+    public void setMaxTezlik(int yangiTezlik){
+
+        if (yangiTezlik > 0){
+
+            this.maxTezlik = yangiTezlik;
+        } else{
+
+            System.out.println("Maksimal tezlik 0 bo'la olmaydi");
+        }
+    }
+// ------------------------------------------------------------
+
+    public int getYolovchiSoni(){
+
+        return this.yolovchiSoni;
+    }
+
+    public void setYolovchiSoni(int yangiYolovchiSoni){
+
+        if (yangiYolovchiSoni > 0){
+
+            this.yolovchiSoni = yangiYolovchiSoni;
+        } else{
+
+            System.out.println("Yo'lovchilar soni 0 bo'la olmaydi");
+        }
+    }
+// ------------------------------------------------------------
+
+    public String getRang(){
+
+        return this.rang;
+    }
+
+    public void setRang(String yangiRang){
+
+        if (!yangiRang.isEmpty()){
+
+            this.rang = yangiRang;
+        }
+    }
+// ------------------------------------------------------------
+
+
 }
