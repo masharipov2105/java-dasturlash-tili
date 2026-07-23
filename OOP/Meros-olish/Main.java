@@ -133,9 +133,9 @@ class Transport{
     class Avtomabil extends Transport{
 
         // o'ziga xos bo'lgan xusuiatlarni tayinlaymiz
-        private String brend = "nomalum";
-        private boolean dizelmi = false; // true bo'lsa dizel false bo'lsa benzin
-        private boolean elektromabilmi = false; // true bo'lsa ha false yo'q
+        protected String brend = "nomalum";
+        protected boolean dizelmi = false; // true bo'lsa dizel false bo'lsa benzin
+        protected boolean elektromabilmi = false; // true bo'lsa ha false yo'q
 
         // konstruktorni yaratamiz super yordmida qolgan umumiy xusuiatlarni tayinlaymiz
         public Avtomabil(String nom_, int max_tezlik_, int yolovchi_soni_, String rang_, String brend_, boolean dizelmi_, boolean elektromabilmi_){
@@ -145,6 +145,43 @@ class Transport{
             this.dizelmi = dizelmi_;
             this.elektromabilmi = elektromabilmi_;
         }
-    }
 
+        //o'ziga xos fieldslar uchun getter/setter larni tayinlash
+
+//---------------------------------------------------------------
+        public String getBrend(){
+
+            return this.brend;
+        }
+
+        public void setBrend(String yangiBrend){
+
+            if (!yangiBrend.isEmpty()){
+
+                this.brend = yangiBrend;
+            }
+        }
+//---------------------------------------------------------------
+        public boolean getDizelmi(){
+
+            return this.dizelmi;
+        }
+
+        public void setDizelmi(boolean yangiDizel){
+
+            this.dizelmi = yangiDizel;
+        }
+//---------------------------------------------------------------
+        public boolean getElektroMabilmi(){
+
+            return this.elektromabilmi;
+        }
+
+        public void setElektroMabilmi(boolean e){
+
+            this.elektromabilmi = e;
+        }
+
+//-------------------------------------------------------------
+    }
 }
