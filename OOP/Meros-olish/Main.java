@@ -28,6 +28,24 @@ public class Main{
         String xolat2 = String.format("\ntr_2: Keyin    \nTur: %s\nMax_tezlik: %d\nYo'lovchilar_soni: %d\nRangi: %s\n", tr_1.getNom(), tr_1.getMaxTezlik(), tr_1.getYolovchiSoni(), tr_1.getRang());
         System.out.println(xolat2);
 
+        // Transport super classining Avtomabil subclassini barcha metodlarini tekshiramiz
+        Avtomabil a_1 = new Avtomabil("K5", 250, 5, "Oq", "Kia", false, false);
+
+        //Avtomabilning dastlabki xolati
+        String xolat_a_1 = String.format("\na_1: Dastlab    \nTur: %s\nMax_tezlik: %d\nYo'lovchilar_soni: %d\nRangi: %s\nBrend: %s \nDizelmi: %b \nElektromabilmi: %b", a_1.getNom(), a_1.getMaxTezlik(), a_1.getYolovchiSoni(), a_1.getRang(), a_1.getBrend(), a_1.getDizelmi(), a_1.getElektroMabilmi());
+        System.out.println(xolat_a_1);
+
+        // Avtomabil subclassining setterlarini tekshirish
+        a_1.setNom("Cybretruck");
+        a_1.setMaxTezlik(200);
+        a_1.setYolovchiSoni(5);
+        a_1.setRang("Kulrang");
+        a_1.setBrend("Tesla");
+        a_1.setDizelmi(false);
+        a_1.setElektroMabilmi(false);
+
+        String xolat2_a_1 = String.format("\na_1: Keyin    \nTur: %s\nMax_tezlik: %d\nYo'lovchilar_soni: %d\nRangi: %s\nBrend: %s \nDizelmi: %b \nElektromabilmi: %b", a_1.getNom(), a_1.getMaxTezlik(), a_1.getYolovchiSoni(), a_1.getRang(), a_1.getBrend(), a_1.getDizelmi(), a_1.getElektroMabilmi());
+        System.out.println(xolat2_a_1);
     }
 }
 
@@ -127,61 +145,61 @@ class Transport{
             this.rang = yangiRang;
         }
     }
+}
 // ------------------------------------------------------------
 
-    // Avtomabil nomli subclass yaratamiz Transport super classidan meros olamiz
-    class Avtomabil extends Transport{
+// Avtomabil nomli subclass yaratamiz Transport super classidan meros olamiz
+class Avtomabil extends Transport{
 
-        // o'ziga xos bo'lgan xusuiatlarni tayinlaymiz
-        protected String brend = "nomalum";
-        protected boolean dizelmi = false; // true bo'lsa dizel false bo'lsa benzin
-        protected boolean elektromabilmi = false; // true bo'lsa ha false yo'q
+    // o'ziga xos bo'lgan xusuiatlarni tayinlaymiz
+    protected String brend = "nomalum";
+    protected boolean dizelmi = false; // true bo'lsa dizel false bo'lsa benzin
+    protected boolean elektromabilmi = false; // true bo'lsa ha false yo'q
 
-        // konstruktorni yaratamiz super yordmida qolgan umumiy xusuiatlarni tayinlaymiz
-        public Avtomabil(String nom_, int max_tezlik_, int yolovchi_soni_, String rang_, String brend_, boolean dizelmi_, boolean elektromabilmi_){
+    // konstruktorni yaratamiz super yordmida qolgan umumiy xusuiatlarni tayinlaymiz
+    public Avtomabil(String nom_, int max_tezlik_, int yolovchi_soni_, String rang_, String brend_, boolean dizelmi_, boolean elektromabilmi_){
 
-            super(nom_, max_tezlik_, yolovchi_soni_, rang_);
-            this.brend = brend_;
-            this.dizelmi = dizelmi_;
-            this.elektromabilmi = elektromabilmi_;
-        }
+        super(nom_, max_tezlik_, yolovchi_soni_, rang_);
+        this.brend = brend_;
+        this.dizelmi = dizelmi_;
+        this.elektromabilmi = elektromabilmi_;
+    }
 
-        //o'ziga xos fieldslar uchun getter/setter larni tayinlash
+    //o'ziga xos fieldslar uchun getter/setter larni tayinlash
 
 //---------------------------------------------------------------
-        public String getBrend(){
+    public String getBrend(){
 
-            return this.brend;
+        return this.brend;
+    }
+
+    public void setBrend(String yangiBrend){
+
+        if (!yangiBrend.isEmpty()){
+
+            this.brend = yangiBrend;
         }
-
-        public void setBrend(String yangiBrend){
-
-            if (!yangiBrend.isEmpty()){
-
-                this.brend = yangiBrend;
-            }
-        }
+    }
 //---------------------------------------------------------------
-        public boolean getDizelmi(){
+    public boolean getDizelmi(){
 
-            return this.dizelmi;
-        }
+        return this.dizelmi;
+    }
 
-        public void setDizelmi(boolean yangiDizel){
+    public void setDizelmi(boolean yangiDizel){
 
-            this.dizelmi = yangiDizel;
-        }
+        this.dizelmi = yangiDizel;
+    }
 //---------------------------------------------------------------
-        public boolean getElektroMabilmi(){
+    public boolean getElektroMabilmi(){
 
-            return this.elektromabilmi;
-        }
+        return this.elektromabilmi;
+    }
 
-        public void setElektroMabilmi(boolean e){
+    public void setElektroMabilmi(boolean e){
 
-            this.elektromabilmi = e;
-        }
+        this.elektromabilmi = e;
+    }
 
 //-------------------------------------------------------------
-    }
 }
