@@ -11,6 +11,11 @@ public class Main{
 
     public static void main(String[] args){
 
+        // Test maqsadida ota sinf asosida obekt yaratamiz
+        Ota ota = new Ota("Otajonov", 70);
+        System.out.println("ism: " + ota.getIsm());
+        System.out.println("yosh: " + ota.getYosh());
+        System.out.println("turi: " + Ota.getTuri());
     }
 }
 
