@@ -12,10 +12,17 @@ public class Main{
     public static void main(String[] args){
 
         // Test maqsadida ota sinf asosida obekt yaratamiz
-        Ota ota = new Ota("Otajonov", 70);
-        System.out.println("ism: " + ota.getIsm());
-        System.out.println("yosh: " + ota.getYosh());
-        System.out.println("turi: " + Ota.getTuri());
+        //Ota ota = new Ota("Otajonov", 70);
+        //System.out.println("ism: " + ota.getIsm());
+        //System.out.println("yosh: " + ota.getYosh());
+        //System.out.println("turi: " + Ota.getTuri());
+
+        // Test uchun Bola sinfidan obekt yaratamiz
+        Bola bola = new Bola("Vali", 40, "Aliev");
+        System.out.println("Ism: " + bola.getIsm());
+        System.out.println("yosh: " + bola.getYosh());
+        System.out.println("familiya: " + bola.getFamiliya());
+        System.out.println("tur: " + Bola.getTuri());
     }
 }
 
@@ -53,6 +60,18 @@ class Ota{
         return turi;
     }
 
+    // private Staric fiedlsni bola sinf ichida o'zgartirishni tajriba qilib ko'ryapmiz
+    protected static void setTuri(String yangiTur){
+
+        if (!yangiTur.isEmpty()){
+
+            turi = yangiTur;
+        } else{
+
+            System.out.println("Bo'sh tur bo'la olmaydi!");
+        }
+    }
+
     // getter lar yaratamiz;
     protected String getIsm(){
 
@@ -79,6 +98,7 @@ class Bola extends Ota{
         super(ism_, yosh_); // meros olingan fiedlslarini initialize qilamiz
         // o'sining fieldsini initialize qilamiz
         this.familiya = familiya_;
+        Ota.setTuri("Bola");
         // Bola sinfning konstruktori initialize bo'lishini ko'rish ucun konsolga matn chop etamiz
         System.out.println("Bola sinf konstruktori initialize bo'ldi!");
     }
