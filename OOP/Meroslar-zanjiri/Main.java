@@ -65,3 +65,27 @@ class Ota{
     }
 
 }
+
+// Bola sinfini Ota sinfdan meros olish orqali shakkklantiramiz
+class Bola extends Ota{
+
+    // o'ziga xos fieldslar
+    protected String familiya;
+
+    // konstruktorni shakklantiramiz
+    protected Bola(String ism_, int yosh_, String familiya_){
+
+        //super yordamida Ota sinf konstruktorini chaqirish MAJBURIY!
+        super(ism_, yosh_); // meros olingan fiedlslarini initialize qilamiz
+        // o'sining fieldsini initialize qilamiz
+        this.familiya = familiya_;
+        // Bola sinfning konstruktori initialize bo'lishini ko'rish ucun konsolga matn chop etamiz
+        System.out.println("Bola sinf konstruktori initialize bo'ldi!");
+    }
+
+    // o'ziga xos fields uchun getter
+    protected String getFamiliya(){
+
+        return this.familiya;
+    }
+}
