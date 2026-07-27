@@ -23,6 +23,13 @@ public class Main{
         //System.out.println("yosh: " + bola.getYosh());
         //System.out.println("familiya: " + bola.getFamiliya());
         //System.out.println("tur: " + Bola.getTuri());
+
+        //Test uchun Nevara sinfidan obekt yaratamiz
+        Nevara nevara = new Nevara("Anvar", 10, "Valiev");
+        System.out.println("Ism: " + nevara.getIsm());
+        System.out.println("yosh: " + nevara.getYosh());
+        System.out.println("familiya: " + nevara.getFamiliya());
+        System.out.println("tur: " + Nevara.getTuri());
     }
 }
 
@@ -109,8 +116,8 @@ class Bola extends Ota{
         return this.familiya;
     }
 
+}
 // Bola sinfidan meros olgan xolda Nevara sinfini shakllantiramiz
-
 class Nevara extends Bola{
 
     // konstruktorini shakklantirish
@@ -118,6 +125,6 @@ class Nevara extends Bola{
 
         super(ism_, yosh_, f);
         Bola.setTuri("Nevara");
+        System.out.println("Nevara konstruktori initialize bo'ldi!");
     }
-}
 }
