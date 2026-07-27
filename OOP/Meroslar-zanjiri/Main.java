@@ -18,11 +18,11 @@ public class Main{
         //System.out.println("turi: " + Ota.getTuri());
 
         // Test uchun Bola sinfidan obekt yaratamiz
-        Bola bola = new Bola("Vali", 40, "Aliev");
-        System.out.println("Ism: " + bola.getIsm());
-        System.out.println("yosh: " + bola.getYosh());
-        System.out.println("familiya: " + bola.getFamiliya());
-        System.out.println("tur: " + Bola.getTuri());
+        //Bola bola = new Bola("Vali", 40, "Aliev");
+        //System.out.println("Ism: " + bola.getIsm());
+        //System.out.println("yosh: " + bola.getYosh());
+        //System.out.println("familiya: " + bola.getFamiliya());
+        //System.out.println("tur: " + Bola.getTuri());
     }
 }
 
@@ -108,4 +108,16 @@ class Bola extends Ota{
 
         return this.familiya;
     }
+
+// Bola sinfidan meros olgan xolda Nevara sinfini shakllantiramiz
+
+class Nevara extends Bola{
+
+    // konstruktorini shakklantirish
+    protected Nevara(String ism_, int yosh_, String f){
+
+        super(ism_, yosh_, f);
+        Bola.setTuri("Nevara");
+    }
+}
 }
