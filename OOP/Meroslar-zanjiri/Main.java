@@ -24,6 +24,13 @@ class Ota{
     // o'ziga xos va sub classlari uchun umumiy bo'lgan xususiatlar
     protected String ism;
     protected int yosh;
+    private static String turi;
+
+    // static fieldslarga dastlabki qiymatlarini tayinlash
+    static{
+
+        turi = "Ota";
+    }
 
     // protected konstruktor shakklantiramiz, qolgan sub classlar meros olishi uchun
     protected Ota(String ism_, int yosh_){
@@ -33,5 +40,11 @@ class Ota{
         this.yosh = yosh_;
         // Ota sinf konstruktori doim chaqirilishini ko'rish uchun konsolga matn chop etmaiz
         System.out.println("Ota sinf konstruktori initialize bo'ldi!");
+    }
+
+    // shunchaki o'tgan mavzularni takrorlash uchun Ota sinfning o'zida static metod yaratamiz
+    protected static String getTuri(){
+
+        return turi;
     }
 }
