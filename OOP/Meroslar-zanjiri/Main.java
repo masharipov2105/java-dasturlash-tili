@@ -47,4 +47,16 @@ class Ota{
 
         return turi;
     }
+
+    // getter lar yaratamiz;
+    protected String getIsm(){
+
+        return this.ism;
+    }
+
+    protected int getYosh(){
+
+        return this.yosh;
+    }
+
 }
