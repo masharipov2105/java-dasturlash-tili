@@ -14,6 +14,11 @@ public class Main{
 
     public static void main(String[] args){
 
+    // Overloading asosida shakllantirlgan Kalkulator sinfining metodlarni test qilib ko'ramiz
+    System.out.println("int 12 + int 13 = (int)" + Kalkulator.qoshish(12, 13));
+    System.out.println("int 20 + int 21 + int 23 = (int)" + Kalkulator.qoshish(20, 21, 23));
+    System.out.println("double 22.5 + double 54.82 = (double)" + String.format("%.3f", Kalkulator.qoshish(22.5, 54.82)));
+    System.out.println("String 27 + String 47 = (int)" + Kalkulator.qoshish("27", "47"));
 
     }
 }
@@ -27,25 +32,25 @@ class Kalkulator{
     protected Kalkulator(){}
 
     // qo'shish int tipidagi oddiy 2 sinni yig'indisini qaytaramiz
-    protected int qoshish(int son1, int son2){
+    protected static int qoshish(int son1, int son2){
 
         return (son1 + son2);
     }
 
     // qoshish 3ta int sonini yig'indisini qaytaradi
-    protected int qoshish(int son1, int son2, int son3){
+    protected static int qoshish(int son1, int son2, int son3){
 
         return (son1 + son2 + son3);
     }
 
     // qoshish 2ta double sonlanri yig'ondisini qaytaradi
-    protected double qoshish(double son1, double son2){
+    protected static double qoshish(double son1, double son2){
 
         return (son1 + son2);
     }
 
     // qoshish 2ta matn ko'rinishdagi sonlarni yig'indisini qaytaradi
-    protected int qoshish(String son1, String son2){
+    protected static int qoshish(String son1, String son2){
 
         if (!son1.isEmpty() && !son2.isEmpty()){
 
