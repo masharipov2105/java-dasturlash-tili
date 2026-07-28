@@ -31,4 +31,10 @@ class Kalkulator{
 
         return (son1 + son2);
     }
+
+    // qoshish 3ta int sonini yig'indisini qaytaradi
+    protected int qoshish(int son1, int son2, int son3){
+
+        return (son1 + son2 + son3);
+    }
 }
