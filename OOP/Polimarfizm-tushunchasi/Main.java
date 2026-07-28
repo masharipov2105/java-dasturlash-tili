@@ -20,6 +20,20 @@ public class Main{
     System.out.println("double 22.5 + double 54.82 = (double)" + String.format("%.3f", Kalkulator.qoshish(22.5, 54.82)));
     System.out.println("String 27 + String 47 = (int)" + Kalkulator.qoshish("27", "47"));
 
+    // Shakl sinfini metodlarini tekshirib ko'ramiz
+    Shakl shakl_1 = new Shakl();
+    System.out.println("shakl_1, yuzasi: " + shakl_1.yuza(10));
+    System.out.println("shakl_2, uzunligi: " + shakl_1.uzunlik(10));
+
+    // Aylana sinfini metodlarini tekshirib ko'ramiz
+    Shakl shakl_2 = new Aylana();
+    System.out.println("shakl_2 yuzasi: " + shakl_2.yuza(10));
+    System.out.println("shakl_2 uzunligi: " + String.format("%.3f", shakl_2.uzunlik(10)));
+
+    // Doira sinfini metodlarini tekshirib ko'ramiz
+    Shakl shakl_3 = new Doira();
+    System.out.println("shakl_3 yuzasi: " + String.format("%.3f", shakl_3.yuza(10)));
+    System.out.println("shakl_3 uzunligi: " + String.format("%.3f", shakl_3.uzunlik(10)));
     }
 }
 
@@ -81,14 +95,50 @@ class Shakl{
     protected Shakl(){}
 
     // yuza nomli metod yaratamiz
-    protected double yuza(int h, int l, int R){
+    protected double yuza(int R){
 
         return 0.0;
     }
 
     //uzunlik nomli metod yaratamiz
-    protected double uzunlik(int h, int l, int R){
+    protected double uzunlik(int R){
 
         return 0.0;
+    }
+}
+
+// Aylana nomli sublcass yaratib meros olingan metodlarni @Override orqali qayta yozishni sinab ko'ramiz
+class Aylana extends Shakl{
+
+    //parametrsiz konstruktor quramiz va ixtiyoriy super yordamida superclassning konstruktorini yuklaymiz
+    protected Aylana(){super();}
+
+    // uzunlik  metodini qayta yoramiz
+    @Override
+    protected double uzunlik(int R){
+
+        return (2 * super.Pi * R);
+    }
+    // aylananing yuzasi 0 ga teng yuza metodni qayta yozmaymiz
+}
+
+// Doira classini yaratamiz
+class Doira extends Shakl{
+
+    //parametrsiz konstruktor yaratamiz
+    protected Doira(){super();}
+
+    //uzunlik metodini qayta yozamiz
+    @Override
+    protected double uzunlik(int R){
+
+        return (2 * super.Pi * R);
+    }
+
+    // yuza metodini qayta yozamiz
+    @Override
+    protected double yuza(int R){
+
+        return (super.Pi * (R * R));
     }
 }
