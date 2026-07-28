@@ -61,3 +61,34 @@ class Kalkulator{
         }
     }
 }
+
+
+// Overriding asosida metodlarni ko'p shaklli qilib yozishni ko'rib o'tamiz
+// Shakl nomli super class yaratib ichida yuza va uzunlik nomli metodlarni yaratamiz
+// Aylana, Doira va Tortburchak nomli subclass lar ichida superclassni metodlarini @Override asosida ko'pshaklli qilamiz
+
+class Shakl{
+
+    //o'zgarmas xusuiyatlarni tayinlaymiz
+    protected static double Pi;
+
+    // static xusiaytlarga qiymatlarni tayinlaymiz
+    static {
+
+        Pi = 3.1415;
+    }
+    //parametrsiz konstruktor yaratamiz
+    protected Shakl(){}
+
+    // yuza nomli metod yaratamiz
+    protected double yuza(int h, int l, int R){
+
+        return 0.0;
+    }
+
+    //uzunlik nomli metod yaratamiz
+    protected double uzunlik(int h, int l, int R){
+
+        return 0.0;
+    }
+}
