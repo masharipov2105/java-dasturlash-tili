@@ -43,4 +43,16 @@ class Kalkulator{
 
         return (son1 + son2);
     }
+
+    // qoshish 2ta matn ko'rinishdagi sonlarni yig'indisini qaytaradi
+    protected int qoshish(String son1, String son2){
+
+        if (!son1.isEmpty() && !son2.isEmpty()){
+
+            return (int)(Integer.parseInt(son1) + Integer.parseInt(son2));
+        } else{
+
+            return 0;
+        }
+    }
 }
