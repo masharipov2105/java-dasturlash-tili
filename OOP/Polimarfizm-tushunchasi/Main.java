@@ -37,4 +37,10 @@ class Kalkulator{
 
         return (son1 + son2 + son3);
     }
+
+    // qoshish 2ta double sonlanri yig'ondisini qaytaradi
+    protected double qoshish(double son1, double son2){
+
+        return (son1 + son2);
+    }
 }
