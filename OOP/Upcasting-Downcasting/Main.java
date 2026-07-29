@@ -14,6 +14,17 @@ public class Main{
 
     public static void main(String[] args){
 
+        //Hayvon sinfini test qilamiz
+        Hayvon hayvon = new Hayvon();
+        hayvon.ovoz();
+
+        //Mushuk sinfini test qilamiz
+        Mushuk mushuk = new Mushuk();
+        mushuk.ovoz();
+
+        // Kuchujk sinfini test qilamiz
+        Kuchuk kuchuk = new Kuchuk();
+        kuchuk.ovoz();
     }
 }
 
