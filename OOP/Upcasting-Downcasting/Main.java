@@ -45,3 +45,16 @@ class Mushuk extends Hayvon{
     }
 }
 
+// Kuchuk nomli subclass yaratamiz, Hayvon sinfidan meros olamiz
+class Kuchuk extends Hayvon{
+
+    //paramersiz konstruktor yaratamiz
+    protected Kuchuk(){super();}
+
+    // meros olingan metodlarni qayta yozamiz
+    protected void ovoz(){
+
+        System.out.println("Kuchuk: voov-voov!");
+    }
+}
+
