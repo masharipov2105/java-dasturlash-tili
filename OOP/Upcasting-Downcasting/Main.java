@@ -25,6 +25,29 @@ public class Main{
         // Kuchujk sinfini test qilamiz
         Kuchuk kuchuk = new Kuchuk();
         kuchuk.ovoz();
+
+        // Upcasting amaliyotini bajarib ko'ramiz
+        Hayvon m1 = new Mushuk(); //klassik usul eng ko'p qo'llaniladi
+        Hayvon m2 = mushuk; // alohida o'zgaruvchi asosida upcasting amaliyoti
+
+        m1.ovoz(); //miovv
+        m2.ovoz(); //miovv
+        //m1.dun() // xartolik, superclassda bunda metod yo'q
+
+        // Downcasting amaliyotini bajarib ko'ramiz
+        Hayvon h1 = new Mushuk(); //upcasting
+
+        Mushuk m3 = (Mushuk)h1; //downcasting
+        m3.dum(); //superclassdan subclassga downcasting qilish, maxsus metoddan foydalanish
+
+        // instanceof operatori yordamida xavfsiz tekshiruv asosida downcasting amaliyotini bajarib ko'ramiz
+        Hayvon animal1 = new Kuchuk(); //upcasting
+
+        if (animal1 instanceof Kuchuk){
+
+            Kuchuk k1 = (Kuchuk)animal1;
+            k1.uxla();
+        }
     }
 }
 
@@ -54,6 +77,12 @@ class Mushuk extends Hayvon{
 
         System.out.println("Mushuk: mioovv-moovv!");
     }
+
+    //o'ziga xos metod
+    protected void dum(){
+
+        System.out.println("Mushuk: dumini likkliatmoqda");
+    }
 }
 
 // Kuchuk nomli subclass yaratamiz, Hayvon sinfidan meros olamiz
@@ -66,6 +95,12 @@ class Kuchuk extends Hayvon{
     protected void ovoz(){
 
         System.out.println("Kuchuk: voov-voov!");
+    }
+
+    //o'ziga xos metod
+    protected void uxla(){
+
+        System.out.println("Kuchuk: uxlamoqda...");
     }
 }
 
