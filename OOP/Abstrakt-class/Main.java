@@ -12,10 +12,10 @@ public class Main{
     public static void main(String[] args){
 
         //Televizor sinfidan obekt yaratib test qilib ko'ramiz
-        Televizor t1 = new Televizor("LG", "Trubkali televizor",100);
+        Texnika t1 = new Televizor("LG", "Trubkali televizor",100); //oddiy upcasting
         t1.yoqish();
-        t1.ovoz();
-        t1.ochir(); 
+        Televizor.ovoz();
+        t1.ochir();
     }
 }
 
