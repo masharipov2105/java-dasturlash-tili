@@ -11,6 +11,11 @@ public class Main{
 
     public static void main(String[] args){
 
+        //Televizor sinfidan obekt yaratib test qilib ko'ramiz
+        Televizor t1 = new Televizor("LG", "Trubkali televizor",100);
+        t1.yoqish();
+        t1.ovoz();
+        t1.ochir(); 
     }
 }
 
@@ -40,5 +45,30 @@ abstract class Texnika{
     protected static void ovoz(){
 
         System.out.println("texnika ovoz chiqaryati...");
+    }
+}
+
+// Abstract classdan meros olgan Televizor nomli subclass yaratamiz
+
+class Televizor extends Texnika{
+
+    //konstruktorni shakklantiramiz
+    protected Televizor(String tur_, String nom_, int quvvat_){
+
+        //superclass konstruktori yordamida ininitllaize qilamiz
+        super(tur_, nom_, quvvat_);
+    }
+
+    // meros olingan abstract metodlarni qayta yozamiz , bu majburiy amaliyot
+    @Override
+    protected void yoqish(){
+
+        System.out.println(String.format("%s - %s: ishga tushdi (power on) %d W", super.tur, super.nom, super.quvvat));
+    }
+
+    @Override
+    protected void ochir(){
+
+        System.out.println(String.format("%s - %s: quvvat o'chirildi (power off) 0 W", super.tur, super.nom));
     }
 }
