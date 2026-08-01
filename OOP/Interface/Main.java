@@ -14,6 +14,12 @@ public class Main{
 
     public static void main(String[] args){
 
+        // samsungPhone sinfidan obekt yaratib metodlarini test qilib ko'ramiz
+        samsungPhone p1 = new samsungPhone("Galaxy A23", 76);
+        p1.yoqish();
+        p1.zaryadlash();
+        p1.oyin();
+        p1.ochir();
     }
 }
 
