@@ -36,4 +36,12 @@ class Kompyuter{
         this.ram = ram_;
         this.rom = rom_;
     }
+
+    // Object classidan meros olingan toString metodini qayta yozamiz
+    @Override
+    public String toString(){
+
+        String natija = String.format("brend: %s \nmodel: %s\nyadrolar soni: %d\nRAM: %d GB\nROM: %d TB", this.brend, this.model, this.yadro, this.ram, this.rom);
+        return natija;
+    }
 }
