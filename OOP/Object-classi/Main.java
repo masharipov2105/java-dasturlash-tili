@@ -6,6 +6,9 @@
     -Obkect classidagi asosiy 3ta metodni overriding qilish orqali o'zimizga moslashtirishimiz mumkin
 
 */
+// Kerakli classlarni import qilamiz
+import java.util.Objects;
+
 
 public class Main{
 
@@ -21,6 +24,10 @@ public class Main{
         System.out.println("k1.equals(null): " + k1.equals(null));
         System.out.println("k1.equals(k2) " + k1.equals(k2));
         System.out.println("k1.equals(k1) " + k1.equals(k1));
+
+        // KOmpyuter classi ichida overriding qilingan hashCode metodini test qilamiz
+        System.out.println("k1.hashCode() " + k1.hashCode());
+        System.out.println("k2.hashCode() " + k2.hashCode());
     }
 }
 
@@ -69,5 +76,14 @@ class Kompyuter{
 
             return false;
         }
+    }
+
+    // Object classidan meros olingan hashCode metodini overriding qilib ko'ramiz
+    // Bunda classning fieldslari asosida va Object classining standart hash nomli static metodidan foydlaaniladi
+    // So'ng xosil bo'lgan hash qiymaitni qaytaramiz
+    @Override
+    public int hashCode(){
+
+        return Objects.hash(this.brend, this.model, this.yadro, this.ram, this.rom);
     }
 }
