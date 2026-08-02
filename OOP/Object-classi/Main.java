@@ -13,7 +13,14 @@ public class Main{
 
         // Kompyuter classi orqali obekt yaratib toString metodini test qilib ko'ramiz
         Kompyuter k1 = new Kompyuter("Apple", "MacBook Air", 16, 16, 2);
-        System.out.println(k1);
+        System.out.println("k1 = " + k1);
+
+        Kompyuter k2 = new Kompyuter("Dell", "ECS1250", 16, 16, 2);
+        System.out.println("k2 = " + k2);
+        // Kompyuter classida overriding qilingan equals metodini test qilib ko'ramiz
+        System.out.println("k1.equals(null): " + k1.equals(null));
+        System.out.println("k1.equals(k2) " + k1.equals(k2));
+        System.out.println("k1.equals(k1) " + k1.equals(k1));
     }
 }
 
@@ -46,5 +53,21 @@ class Kompyuter{
 
         String natija = String.format("brend: %s \nmodel: %s\nyadrolar soni: %d\nRAM: %d GB\nROM: %d TB", this.brend, this.model, this.yadro, this.ram, this.rom);
         return natija;
+    }
+
+    // Object classidan meros olingan equals metodini ovveriding qilib ko'ramiz
+    @Override
+    public boolean equals(Object obyekt){
+
+        if (obyekt == null){
+
+            return false;
+        } else if (this == obyekt){
+
+            return true;
+        } else{
+
+            return false;
+        }
     }
 }
