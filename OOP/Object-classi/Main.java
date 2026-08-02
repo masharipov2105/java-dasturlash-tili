@@ -11,6 +11,9 @@ public class Main{
 
     public static void main(String[] args){
 
+        // Kompyuter classi orqali obekt yaratib toString metodini test qilib ko'ramiz
+        Kompyuter k1 = new Kompyuter("Apple", "MacBook Air", 16, 16, 2);
+        System.out.println(k1);
     }
 }
 
