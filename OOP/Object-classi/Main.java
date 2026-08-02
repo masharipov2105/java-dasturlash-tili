@@ -26,5 +26,14 @@ class Kompyuter{
     protected int ram; // GB da
     protected int rom; // Tb da
 
-    
+    // konstruktorni tayinlaymiz
+    protected Kompyuter(String brend_, String model_, int yadro_, int ram_, int rom_){
+
+        //fieldslariga konstruktor parametrlari orqali dastlabki qiymatlarini berib initialize qilamiz
+        this.brend = brend_;
+        this.model = model_;
+        this.yadro = yadro_;
+        this.ram = ram_;
+        this.rom = rom_;
+    }
 }
