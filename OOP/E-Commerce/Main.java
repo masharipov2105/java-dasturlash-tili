@@ -39,4 +39,53 @@ abstract class Product{
         this.name = name_;
         this.price = price_;
     }
+
+    // private fieldslarga murojaat uchun getter va setter larni yaratish
+    public int getId(){
+
+        return this.id;
+    }
+
+    public String getName(){
+
+        return this.name;
+    }
+
+    public int getPrice(){
+
+        return this.price;
+    }
+
+    public void setId(int newId){
+
+        if (newId > 0){
+
+            this.id = newId;
+        } else{
+
+            System.out.println("ID musbat butun son bo'lishi kerak!");
+        }
+    }
+
+    public void setName(String newName){
+
+        if (!newName.isEmpty() || newName != null){
+
+            this.name = newName;
+        } else{
+
+            System.out.println("nom bo'sh bo'lmasligi kerak");
+        }
+    }
+
+    public void setPrice(int newPrice){
+
+        if (newPrice > 0){
+
+            this.price = newPrice;
+        } else{
+
+            System.out.println("Narx 0 dan katta bo'lishi kerak");
+        }
+    }
 }
