@@ -22,7 +22,7 @@ public class Main{
 // fieldslar private xolatida bo'ladi
 // private fieldslarga faqat getter/setter yordamida murojaat amalga oshiriladi
 // getDiscountedPrice() nomli abstract metod bilan har bir subclass o'z chegirmasini belgilaydi
-// har bir subclass da toString metodini overriding qilamiz
+// toString metodini overriding qilamiz
 
 abstract class Product{
 
@@ -87,5 +87,13 @@ abstract class Product{
 
             System.out.println("Narx 0 dan katta bo'lishi kerak");
         }
+    }
+
+    // toString metodini overriding qilamiz, mahsulotni chiroyli ko'rinishda chiqarish uchun
+    @Override
+    public String toString(){
+
+        String finalString = String.format("\nid: %d\nname: %s\nprice: %d $", this.id, this.name, this.price);
+        return finalString;
     }
 }
