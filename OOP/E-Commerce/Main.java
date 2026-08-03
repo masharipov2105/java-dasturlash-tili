@@ -102,6 +102,52 @@ abstract class Product{
 interface Purchasable{
 
     void purchase(); //sotib olish uchun metod;
-    boolean isAvailable(); // mavjudligini bilish uchun metod;
+    boolean isAvaiable(); // mavjudligini bilish uchun metod;
 }
 
+// Electronics subclassini yaratamiz Product sinfidan meros olib Purchasable interfaceini implements qilamiz
+class Electronics extends Product implements Purchasable{
+
+    //o'ziga xos fieldslarini yaratamiz
+    private int count;
+    private boolean avaiable;
+
+    //konstruktorni shakklantiramiz
+    public Electronics(int id_, String name_, int price_, int count_){
+
+        // super yordamida ota class konstruktorini chaqirib initialize qilamiz kodni qisqartirish uchun
+        super(id_, name_, price_);
+        // qolgan o'ziga xos fieldslarni ham initialize qilamiz
+        this.count = count_;
+        if (count_ > 0){
+
+            this.avaiable = true;
+        } else {
+
+            this.avaiable = false;
+        }
+    }
+
+    // interfeysdagi metodlarni overriding qilamiz
+    @Override
+    public boolean isAvaiable(){
+
+        return this.avaiable;
+    }
+
+    @Override
+    public void purchase(){
+
+        if (this.isAvaiable()){
+
+            this.count --;
+            if (this.count == 0){
+
+                this.avaiable = false;
+            }
+        } else{
+
+            System.out.println(String.format("id: %d, name: %s, count: %d, mahsulot qolmagan", super.getId(), super.getName(), this.count));
+        }
+    }
+}
