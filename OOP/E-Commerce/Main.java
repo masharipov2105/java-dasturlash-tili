@@ -97,3 +97,11 @@ abstract class Product{
         return finalString;
     }
 }
+
+//subclasslarning umumiy abstract metodlari uchun interface yaratamiz
+interface Purchasable{
+
+    void purchase(); //sotib olish uchun metod;
+    boolean isAvailable(); // mavjudligini bilish uchun metod;
+}
+
