@@ -9,6 +9,10 @@
 
 */
 
+// Kerakli modullarni yuklash
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main{
 
     public static void main(String[] args){
@@ -174,7 +178,15 @@ class Cart{
     // o'ziga xos fieldslarni belgilaymiz
     private double discountedPrice;
     private int totalPrice;
+    private List<Product> productList = new ArrayList<>();
 
     // bo'sh konstruktor yaratamiz
     public Cart(){}
+
+    // o'ziga xos metodlarini shakllantiramiz
+    public void addProduct(Product product){
+
+        // Mahsulotni ro'yxatga qo'shish
+        this.productList.add(product);
+    }
 }
