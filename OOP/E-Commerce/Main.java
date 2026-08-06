@@ -96,6 +96,9 @@ abstract class Product{
         String finalString = String.format("\nid: %d\nname: %s\nprice: %d $", this.id, this.name, this.price);
         return finalString;
     }
+
+    // Har bir subclass o'zining chegirmasini belgilaydi;
+    public abstract double getDiscountedPrice();
 }
 
 //subclasslarning umumiy abstract metodlari uchun interface yaratamiz
@@ -150,4 +153,15 @@ class Electronics extends Product implements Purchasable{
             System.out.println(String.format("id: %d, name: %s, count: %d, mahsulot qolmagan", super.getId(), super.getName(), this.count));
         }
     }
+
+    // chegirma narxini belgilash
+    @Override
+    public double getDiscountedPrice(){
+
+        // chegirma foizi
+        int discountPrice = 10;
+        // belgilangan narx (this.price) ga 10% chegirma
+        return (double)((super.getPrice() * discountPrice) / 100);
+    }
 }
+
