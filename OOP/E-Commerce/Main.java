@@ -165,3 +165,16 @@ class Electronics extends Product implements Purchasable{
     }
 }
 
+
+
+
+// Cart sinfini yaratamiz mavjud Productlar ni yig'ish umumiy narx, chegirmani chiqarish uchun
+class Cart{
+
+    // o'ziga xos fieldslarni belgilaymiz
+    private double discountedPrice;
+    private int totalPrice;
+
+    // bo'sh konstruktor yaratamiz
+    public Cart(){}
+}
