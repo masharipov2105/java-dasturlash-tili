@@ -17,6 +17,22 @@ public class Main{
 
     public static void main(String[] args){
 
+        // Mahsulot yaratishni test qilib ko'ramiz
+        // Electronics classi orqali obekt yaratamiz
+
+        // Upcasting
+        Product p1 = new Electronics(1, "Diod", 1, 100);
+        // Mahsulotni chop etib ko'rish
+        System.out.println(p1);
+
+        // Mahsulotni Cart classi yordamida yaratulgan obekt asosida ro'yxatni test qilamiz
+        Cart cart = new Cart();
+        cart.addProduct(p1);
+
+        for (Product pro: cart.getProducts()){
+
+            System.out.println(pro);
+        }
     }
 }
 
@@ -167,6 +183,12 @@ class Electronics extends Product implements Purchasable{
         // belgilangan narx (this.price) ga 10% chegirma
         return (double)((super.getPrice() * discountPrice) / 100);
     }
+
+    // mahsulot soni
+    public int getCount(){
+
+        return this.count;
+    }
 }
 
 
@@ -201,5 +223,16 @@ class Cart{
     public List<Product> getProducts(){
 
         return this.productList;
+    }
+
+    // Umumiy summani qaytaruvchi metod
+    public int getTotalSumm(){
+
+        for (Product product: this.productList){
+
+            this.totalPrice += product.getPrice();
+        }
+
+        return this.totalPrice;
     }
 }
