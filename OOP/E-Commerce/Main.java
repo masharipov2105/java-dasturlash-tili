@@ -184,9 +184,22 @@ class Cart{
     public Cart(){}
 
     // o'ziga xos metodlarini shakllantiramiz
+    // mahsulot qo'shish metodi
     public void addProduct(Product product){
 
         // Mahsulotni ro'yxatga qo'shish
         this.productList.add(product);
+    }
+
+    // Mahsulotni olib tashlash metodi
+    public void removeProduct(Product product){
+
+        this.productList.remove(product);
+    }
+
+    // Barcha mahsulotlarni olish
+    public List<Product> getProducts(){
+
+        return this.productList;
     }
 }
