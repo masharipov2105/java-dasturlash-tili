@@ -17,22 +17,22 @@ public class Main{
 
     public static void main(String[] args){
 
-        // Mahsulot yaratishni test qilib ko'ramiz
-        // Electronics classi orqali obekt yaratamiz
+        Savat savat = new Savat();
+        Mahsulot m1 = new Elektronika(1, "Diod", 1, 100);
 
-        // Upcasting
-        Product p1 = new Electronics(1, "Diod", 1, 100);
-        // Mahsulotni chop etib ko'rish
-        System.out.println(p1);
+        savat.addMahsulot(m1, 2);
 
-        // Mahsulotni Cart classi yordamida yaratulgan obekt asosida ro'yxatni test qilamiz
-        Cart cart = new Cart();
-        cart.addProduct(p1);
+        for (Mahsulot mahsulot: savat.getMahsulot()){
 
-        for (Product pro: cart.getProducts()){
-
-            System.out.println(pro);
+            System.out.println(mahsulot);
         }
+        savat.removeMahsulot(m1);
+
+        for (Mahsulot mahsulot: savat.getMahsulot()){
+
+            System.out.println(mahsulot);
+        }
+        System.out.println(m1.getSoni());
     }
 }
 
@@ -44,20 +44,32 @@ public class Main{
 // getDiscountedPrice() nomli abstract metod bilan har bir subclass o'z chegirmasini belgilaydi
 // toString metodini overriding qilamiz
 
-abstract class Product{
+// barcha subclasslar uchun metodlar
+interface UmumiyMetodlar{
+
+    void sotish();
+    boolean mavjudmi();
+    int getSoni();
+    String getMuallif();
+    int getOlcham();
+    double chegirmaNarxi();
+    void setSoni();
+}
+
+abstract class Mahsulot implements UmumiyMetodlar{
 
     // umumyi fieldslarni yaratamiz
     private int id;
-    private String name;
-    private int price;
+    private String nomi;
+    private int narxi;
 
     // konstruktorni shakklantiramiz
-    public Product(int id_, String name_, int price_){
+    public Mahsulot(int id_, String nomi_, int narxi_){
 
         // fieldsgarga dastlabki qiymatlarni berib iniitalize qilish
         this.id = id_;
-        this.name = name_;
-        this.price = price_;
+        this.nomi = nomi_;
+        this.narxi = narxi_;
     }
 
     // private fieldslarga murojaat uchun getter va setter larni yaratish
@@ -66,14 +78,14 @@ abstract class Product{
         return this.id;
     }
 
-    public String getName(){
+    public String getNomi(){
 
-        return this.name;
+        return this.nomi;
     }
 
-    public int getPrice(){
+    public int getNarxi(){
 
-        return this.price;
+        return this.narxi;
     }
 
     public void setId(int newId){
@@ -87,152 +99,181 @@ abstract class Product{
         }
     }
 
-    public void setName(String newName){
+    public void setNomi(String newName){
 
         if (!newName.isEmpty() || newName != null){
 
-            this.name = newName;
+            this.nomi = newName;
         } else{
 
             System.out.println("nom bo'sh bo'lmasligi kerak");
         }
     }
 
-    public void setPrice(int newPrice){
+    public void setNarxi(int newPrice){
 
         if (newPrice > 0){
 
-            this.price = newPrice;
+            this.narxi = newPrice;
         } else{
 
             System.out.println("Narx 0 dan katta bo'lishi kerak");
         }
     }
 
-    // toString metodini overriding qilamiz, mahsulotni chiroyli ko'rinishda chiqarish uchun
+    // Umumiy metodlarni ovveriding qilamiz (Adapter class vazifasini ham bajaramiz)
     @Override
-    public String toString(){
+    public void sotish(){}
 
-        String finalString = String.format("\nid: %d\nname: %s\nprice: %d $", this.id, this.name, this.price);
-        return finalString;
-    }
+    @Override
+    public boolean mavjudmi(){return false;}
 
-    // Har bir subclass o'zining chegirmasini belgilaydi;
-    public abstract double getDiscountedPrice();
+    @Override
+    public int getSoni(){return 0;}
+
+    @Override
+    public String getMuallif(){return null;}
+
+    @Override
+    public int getOlcham(){return 0;}
+
+    @Override
+    public double chegirmaNarxi(){return 0.0;}
+
+    @Override
+    public void setSoni(){}
 }
 
-//subclasslarning umumiy abstract metodlari uchun interface yaratamiz
-interface Purchasable{
-
-    void purchase(); //sotib olish uchun metod;
-    boolean isAvaiable(); // mavjudligini bilish uchun metod;
-}
-
-// Electronics subclassini yaratamiz Product sinfidan meros olib Purchasable interfaceini implements qilamiz
-class Electronics extends Product implements Purchasable{
+// Elektronika nomli subclass yaratamiz
+// Elektronika mahsulot turi bo'lib Mahsulot sinfidan meros oladi
+class Elektronika extends Mahsulot{
 
     //o'ziga xos fieldslarini yaratamiz
-    private int count;
-    private boolean avaiable;
+    private int soni;
+    private boolean mavjudlik;
 
     //konstruktorni shakklantiramiz
-    public Electronics(int id_, String name_, int price_, int count_){
+    public Elektronika(int id_, String nomi_, int narxi_, int soni_){
 
         // super yordamida ota class konstruktorini chaqirib initialize qilamiz kodni qisqartirish uchun
-        super(id_, name_, price_);
+        super(id_, nomi_, narxi_);
         // qolgan o'ziga xos fieldslarni ham initialize qilamiz
-        this.count = count_;
-        if (count_ > 0){
+        this.soni = soni_;
+        if (soni_ > 0){
 
-            this.avaiable = true;
+            this.mavjudlik = true;
         } else {
 
-            this.avaiable = false;
+            this.mavjudlik = false;
         }
     }
 
     // interfeysdagi metodlarni overriding qilamiz
     @Override
-    public boolean isAvaiable(){
+    public boolean mavjudmi(){
 
-        return this.avaiable;
+        return this.mavjudlik;
     }
 
     @Override
-    public void purchase(){
+    public void sotish(){
 
-        if (this.isAvaiable()){
+        if (this.mavjudmi()){
 
-            this.count --;
-            if (this.count == 0){
+            this.soni --;
+            if (this.soni <= 0){
 
-                this.avaiable = false;
+                this.soni = 0;
+                this.mavjudlik = false;
             }
         } else{
 
-            System.out.println(String.format("id: %d, name: %s, count: %d, mahsulot qolmagan", super.getId(), super.getName(), this.count));
+            System.out.println(String.format("id: %d, name: %s, count: %d, mahsulot qolmagan", super.getId(), super.getNomi(), this.soni));
         }
     }
 
     // chegirma narxini belgilash
     @Override
-    public double getDiscountedPrice(){
+    public double chegirmaNarxi(){
 
         // chegirma foizi
-        int discountPrice = 10;
+        int foiz = 10;
         // belgilangan narx (this.price) ga 10% chegirma
-        return (double)((super.getPrice() * discountPrice) / 100);
+        return (double)((super.getNarxi() * foiz) / 100);
     }
 
     // mahsulot soni
-    public int getCount(){
+    public int getSoni(){
 
-        return this.count;
+        return this.soni;
+    }
+
+    // Mahsulot savatdan chiqarilhganida mahsulotlar soni oshirgan xolda umumiy mahsulotlar sonini yangilash
+    @Override
+    public void setSoni(){
+
+        this.soni ++;
+    }
+
+    // Object sinfidan kelgan toString metodini override qilmiz,
+    @Override
+    public String toString(){
+
+        String finalString = String.format("\nid: %d\nnomi: %s\nnarxi: %d\n", super.getId(), super.getNomi(), super.getNarxi());
+        return finalString;
     }
 }
 
 
-
-
-// Cart sinfini yaratamiz mavjud Productlar ni yig'ish umumiy narx, chegirmani chiqarish uchun
-class Cart{
+// Savat sinfini yaratamiz mavjud Mahsulotlarni yig'ish umumiy narx, chegirmani chiqarish uchun
+class Savat{
 
     // o'ziga xos fieldslarni belgilaymiz
-    private double discountedPrice;
-    private int totalPrice;
-    private List<Product> productList = new ArrayList<>();
+    private double chegirmaNarx = 0.0;
+    private int umumiyNarx = 0;
+    private List<Mahsulot> mahsulotRoyxati = new ArrayList<>();
 
     // bo'sh konstruktor yaratamiz
-    public Cart(){}
+    public Savat(){}
 
     // o'ziga xos metodlarini shakllantiramiz
     // mahsulot qo'shish metodi
-    public void addProduct(Product product){
+    public void addMahsulot(Mahsulot mahsulot, int soni){
 
-        // Mahsulotni ro'yxatga qo'shish
-        this.productList.add(product);
+        if (soni < mahsulot.getSoni()){
+            // Mahsulotni ro'yxatga qo'shish
+            for (int i = 0; i < soni; i ++){
+
+                mahsulot.sotish();
+                mahsulotRoyxati.add(mahsulot);
+            }
+        } else{
+
+            System.out.println("Faqat " + mahsulot.getSoni() + " ta xarid qilish mumkin");
+        }
     }
 
     // Mahsulotni olib tashlash metodi
-    public void removeProduct(Product product){
+    public void removeMahsulot(Mahsulot mahsulot){
 
-        this.productList.remove(product);
+        this.mahsulotRoyxati.remove(mahsulot);
+        mahsulot.setSoni();
     }
 
     // Barcha mahsulotlarni olish
-    public List<Product> getProducts(){
+    public List<Mahsulot> getMahsulot(){
 
-        return this.productList;
+        return this.mahsulotRoyxati;
     }
 
     // Umumiy summani qaytaruvchi metod
-    public int getTotalSumm(){
+    public int getUmumiyNarx(){
 
-        for (Product product: this.productList){
+        for (Mahsulot mahsulot: this.mahsulotRoyxati){
 
-            this.totalPrice += product.getPrice();
+            this.umumiyNarx += mahsulot.getNarxi();
         }
 
-        return this.totalPrice;
+        return this.umumiyNarx;
     }
 }
