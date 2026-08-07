@@ -20,19 +20,6 @@ public class Main{
         Savat savat = new Savat();
         Mahsulot m1 = new Elektronika(1, "Diod", 1, 100);
 
-        savat.addMahsulot(m1, 2);
-
-        for (Mahsulot mahsulot: savat.getMahsulot()){
-
-            System.out.println(mahsulot);
-        }
-        savat.removeMahsulot(m1);
-
-        for (Mahsulot mahsulot: savat.getMahsulot()){
-
-            System.out.println(mahsulot);
-        }
-        System.out.println(m1.getSoni());
     }
 }
 
@@ -223,6 +210,39 @@ class Elektronika extends Mahsulot{
         return finalString;
     }
 }
+
+// Kitob subclassini yaratamiz
+// BU sinfda o'ziga xos bo'lgan Muallif fieldis va unga bog'liq metodlar bo'ladi
+// toString metodini ham o'ziga xos fieldsi asosida Overriding qilamiz
+class Kitob extends Mahsulot{
+
+    // o'ziga xos fieldslari
+    private String muallif;
+    private int soni;
+    private boolean mavjudlik;
+
+    // konstruktorni tayinlaymiz
+    public Kitob(int id_, String nomi_, int narxi_, String muallif_, int soni_){
+
+        // superclass konstrukto bi;an initialize qilamiz
+        super(id_, nomi_, narxi_);
+        // o'ziga xos fieldslarni initialize qilamiz
+        this.muallif = muallif_;
+        this.soni = soni_;
+
+        if (soni_ > 0){
+
+            this.mavjudlik = true;
+        } else {
+
+            this.mavjudlik = false;
+        }
+    }
+}
+
+
+
+
 
 
 // Savat sinfini yaratamiz mavjud Mahsulotlarni yig'ish umumiy narx, chegirmani chiqarish uchun
