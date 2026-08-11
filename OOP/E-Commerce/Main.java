@@ -155,7 +155,7 @@ class Elektronika extends Mahsulot{
         }
     }
 
-    // interfeysdagi metodlarni overriding qilamiz
+    // sinfga kerkali metodlanri superclassdan olib qayta overriding qilamiz
     @Override
     public boolean mavjudmi(){
 
@@ -185,7 +185,7 @@ class Elektronika extends Mahsulot{
 
         // chegirma foizi
         int foiz = 10;
-        // belgilangan narx (this.price) ga 10% chegirma
+        // belgilangan narx (super.narx) ga 10% chegirma
         return (double)((super.getNarxi() * foiz) / 100);
     }
 
@@ -237,8 +237,33 @@ class Kitob extends Mahsulot{
 
             this.mavjudlik = false;
         }
+
+    }
+    // sinfga kerkali metodlanri superclassdan olib qayta overriding qilamiz
+    @Override
+    public boolean mavjudmi(){
+
+        return this.mavjudlik;
+    }
+
+    @Override
+    public void sotish(){
+
+        if (this.mavjudmi()){
+
+            this.soni --;
+            if (this.soni <= 0){
+
+                this.soni = 0;
+                this.mavjudlik = false;
+            }
+        } else{
+
+            System.out.println(String.format("id: %d, name: %s, count: %d, mahsulot qolmagan", super.getId(), super.getNomi(), this.soni));
+        }
     }
 }
+
 
 
 
