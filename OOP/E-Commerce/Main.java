@@ -262,6 +262,23 @@ class Kitob extends Mahsulot{
             System.out.println(String.format("id: %d, name: %s, count: %d, mahsulot qolmagan", super.getId(), super.getNomi(), this.soni));
         }
     }
+
+    // chegirma narxini belgilash
+    @Override
+    public double chegirmaNarxi(){
+
+        // chegirma foizi
+        int foiz = 10;
+        // belgilangan narx (super.narx) ga 10% chegirma
+        return (double)((super.getNarxi() * foiz) / 100);
+    }
+
+    // mahsulot soni
+    public int getSoni(){
+
+        return this.soni;
+    }
+
 }
 
 
