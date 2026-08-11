@@ -303,6 +303,13 @@ class Kitob extends Mahsulot{
         }
     }
 
+    // toString metodini sinfga moslab overriding qilamiz
+    @Override
+    public String toString(){
+
+        String finalString = String.format("\nid: %d\nnomi: %s\nnarxi: %d\nmuallif: %s\n", super.getId(), super.getNomi(), super.getNarxi(), this.getMuallif());
+        return finalString;
+    }
 }
 
 
