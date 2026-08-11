@@ -340,6 +340,29 @@ class Kiyim extends Mahsulot{
         }
     }
 
+    // sinfga kerkali metodlanri superclassdan olib qayta overriding qilamiz
+    @Override
+    public boolean mavjudmi(){
+
+        return this.mavjudlik;
+    }
+
+    @Override
+    public void sotish(){
+
+        if (this.mavjudmi()){
+
+            this.soni --;
+            if (this.soni <= 0){
+
+                this.soni = 0;
+                this.mavjudlik = false;
+            }
+        } else{
+
+            System.out.println(String.format("id: %d, name: %s, count: %d, mahsulot qolmagan", super.getId(), super.getNomi(), this.soni));
+        }
+    }
 
 }
 
