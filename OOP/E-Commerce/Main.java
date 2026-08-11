@@ -369,7 +369,7 @@ class Kiyim extends Mahsulot{
     public double chegirmaNarxi(){
 
         // chegirma foizi
-        int foiz = 5;
+        int foiz = 7;
         // belgilangan narx (super.narx) ga 5% chegirma
         return (double)((super.getNarxi() * foiz) / 100);
     }
@@ -380,15 +380,26 @@ class Kiyim extends Mahsulot{
         return this.soni;
     }
 
-    public void setSoni(int newSoni){
+    public void setSoni(){
 
-        if(newSoni > 0){
+        this.soni ++;
+    }
 
-            this.soni = newSoni;
+    // o'lcham uchun getter/setter shakklantiramiz
+    public void setOlcham(int newOlcham){
+
+        if (newOlcham > 0){
+
+            this.olcham = newOlcham;
         } else{
 
-            System.out.println("Mahsulot musbat butun son bo'lishi kerak");
+            System.out.println("O'lcham musbat buutn son bo'lishi kerak");
         }
+    }
+
+    public int getOlcham(){
+
+        return this.olcham;
     }
 }
 
