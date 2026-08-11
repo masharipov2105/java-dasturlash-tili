@@ -279,6 +279,13 @@ class Kitob extends Mahsulot{
         return this.soni;
     }
 
+    // Mahsulot savatdan chiqarilhganida mahsulotlar soni oshirgan xolda umumiy mahsulotlar sonini yangilash
+    @Override
+    public void setSoni(){
+
+        this.soni ++;
+    }
+
 }
 
 
