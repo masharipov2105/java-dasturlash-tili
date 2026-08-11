@@ -307,7 +307,7 @@ class Kitob extends Mahsulot{
     @Override
     public String toString(){
 
-        String finalString = String.format("\nid: %d\nnomi: %s\nnarxi: %d\nmuallif: %s\n", super.getId(), super.getNomi(), super.getNarxi(), this.getMuallif());
+        String finalString = String.format("\nid: %d\nnomi: %s\nnarxi: %d $\nmuallif: %s\n", super.getId(), super.getNomi(), super.getNarxi(), this.getMuallif());
         return finalString;
     }
 }
@@ -400,6 +400,14 @@ class Kiyim extends Mahsulot{
     public int getOlcham(){
 
         return this.olcham;
+    }
+
+    // toString metodini Kiyinm sinfiga moslab overriding qilamiz
+    @Override
+    public String toString(){
+
+        String finalString = String.format("\nid: %d, \nnomi: %s\nnarxi: %d $\nsoni: %d\no'lcham: %d", super.getId(), super.getNomi(), super.getNarxi(), this.getSoni(), this.getOlcham());
+        return finalString;
     }
 }
 
