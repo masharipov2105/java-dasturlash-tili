@@ -286,6 +286,23 @@ class Kitob extends Mahsulot{
         this.soni ++;
     }
 
+    // muallif fieldisi ucuhn getter/setter ni yozamiz
+    public String getMuallif(){
+
+        return this.muallif;
+    }
+
+    public void setMuallif(String newMuallif){
+
+        if(!newMuallif.isEmpty() && newMuallif != null){
+
+            this.muallif = newMuallif;
+        } else{
+
+            System.out.println("Muallif nomi bo'sh bo'lmasligi kerak");
+        }
+    }
+
 }
 
 
