@@ -17,9 +17,32 @@ public class Main{
 
     public static void main(String[] args){
 
+        // Savatni tayinlab shakklantirib olamiz
         Savat savat = new Savat();
+
+        // Elektronika asosida yangi mahsulotni shakklantiramiz
         Mahsulot m1 = new Elektronika(1, "Diod", 1, 100);
+
+        //Kitob asosida yangi mahsulot shakklantiramiz
         Mahsulot m2 = new Kitob(2, "Sariq devni minib", 2,"Xudoyberdi To'xtaboev" ,200);
+
+        // Kiyim asosida yangi mahsulot shakklantiramiz
+        Mahsulot m3 = new Kiyim(3, "Kurtka", 50, 42, 100);
+
+        // Yaratilgan mahsulotlar asosdia savatimizga mahsulotlarni joylaymiz
+        savat.addMahsulot(m1, 4);
+        savat.addMahsulot(m2, 2);
+        savat.addMahsulot(m3, 1);
+
+        // Mahsulotlar ro'yxatini ko'rish
+        for (Mahsulot mahsulot: savat.getMahsulot()){
+
+            System.out.println(mahsulot);
+        }
+        // Umumiy narxni chop etamiz
+        System.out.println("Savatdagni mahsulotlar umumiy narxi: " + savat.getUmumiyNarx() + " $");
+        // Umumiy mhasulotlarning chegirmadagi narxni chop etamiz
+        System.out.println("Savatdagi mahsulotarning chegirma narx: " + savat.getUmumiyChegirma() + " $");
     }
 }
 
@@ -186,7 +209,7 @@ class Elektronika extends Mahsulot{
         // chegirma foizi
         int foiz = 10;
         // belgilangan narx (super.narx) ga 10% chegirma
-        return (double)((super.getNarxi() * foiz) / 100);
+        return (double)((super.getNarxi() * (100 - foiz)) / 100);
     }
 
     // mahsulot soni
@@ -270,7 +293,7 @@ class Kitob extends Mahsulot{
         // chegirma foizi
         int foiz = 5;
         // belgilangan narx (super.narx) ga 5% chegirma
-        return (double)((super.getNarxi() * foiz) / 100);
+        return (double)((super.getNarxi() * (100 - foiz)) / 100);
     }
 
     // mahsulot soni
@@ -330,7 +353,7 @@ class Kiyim extends Mahsulot{
         super(id_, nomi_, narxi_);
         //o\ziga xos fieldslarni ham initialize qilamiz
         this.soni = soni_;
-
+        this.olcham = olcham_;
         if (soni_ > 0){
 
             this.mavjudlik = true;
@@ -371,7 +394,7 @@ class Kiyim extends Mahsulot{
         // chegirma foizi
         int foiz = 7;
         // belgilangan narx (super.narx) ga 5% chegirma
-        return (double)((super.getNarxi() * foiz) / 100);
+        return (double)((super.getNarxi() * (100 - foiz)) / 100);
     }
 
     // mahsulot soni
@@ -406,7 +429,7 @@ class Kiyim extends Mahsulot{
     @Override
     public String toString(){
 
-        String finalString = String.format("\nid: %d, \nnomi: %s\nnarxi: %d $\nsoni: %d\no'lcham: %d", super.getId(), super.getNomi(), super.getNarxi(), this.getSoni(), this.getOlcham());
+        String finalString = String.format("\nid: %d, \nnomi: %s\nnarxi: %d $\no'lcham: %d", super.getId(), super.getNomi(), super.getNarxi(), this.getOlcham());
         return finalString;
     }
 }
@@ -469,5 +492,16 @@ class Savat{
         }
 
         return this.umumiyNarx;
+    }
+
+    // Umumiy chegirma narxini qaytaruvchi metod
+
+    public double getUmumiyChegirma(){
+
+        for (Mahsulot mahsulot: this.mahsulotRoyxati){
+
+            this.chegirmaNarx += mahsulot.chegirmaNarxi();
+        }
+        return this.chegirmaNarx;
     }
 }
