@@ -19,7 +19,7 @@ public class Main{
 
         Savat savat = new Savat();
         Mahsulot m1 = new Elektronika(1, "Diod", 1, 100);
-
+        Mahsulot m2 = new Kitob(2, "Sariq devni minib", 2,"Xudoyberdi To'xtaboev" ,200);
     }
 }
 
@@ -268,8 +268,8 @@ class Kitob extends Mahsulot{
     public double chegirmaNarxi(){
 
         // chegirma foizi
-        int foiz = 10;
-        // belgilangan narx (super.narx) ga 10% chegirma
+        int foiz = 5;
+        // belgilangan narx (super.narx) ga 5% chegirma
         return (double)((super.getNarxi() * foiz) / 100);
     }
 
@@ -313,9 +313,35 @@ class Kitob extends Mahsulot{
 }
 
 
+// Kiyim nomli yangi subclass yaratamiz
+// Mahsulot sinfidan meros olamiz, kerakli metodlarni overriding qilamiz
+// o'ziga xos fiedslar va ularning getter/setterlarini sozlaymiz
+class Kiyim extends Mahsulot{
+
+    //o'ziga xos fieldslarni shakllantiramiz
+    private int soni;
+    private boolean mavjudlik;
+    private int olcham;
+
+    //konstruktorni tayinlaymiz
+    public Kiyim(int id_, String nomi_, int narxi_, int olcham_, int soni_){
+
+        // super yordamida superclassni konstruktorini yuklaymiz
+        super(id_, nomi_, narxi_);
+        //o\ziga xos fieldslarni ham initialize qilamiz
+        this.soni = soni_;
+
+        if (soni_ > 0){
+
+            this.mavjudlik = true;
+        } else {
+
+            this.mavjudlik = false;
+        }
+    }
 
 
-
+}
 
 
 // Savat sinfini yaratamiz mavjud Mahsulotlarni yig'ish umumiy narx, chegirmani chiqarish uchun
