@@ -364,7 +364,40 @@ class Kiyim extends Mahsulot{
         }
     }
 
+    // chegirma narxini belgilash
+    @Override
+    public double chegirmaNarxi(){
+
+        // chegirma foizi
+        int foiz = 5;
+        // belgilangan narx (super.narx) ga 5% chegirma
+        return (double)((super.getNarxi() * foiz) / 100);
+    }
+
+    // mahsulot soni
+    public int getSoni(){
+
+        return this.soni;
+    }
+
+    public void setSoni(int newSoni){
+
+        if(newSoni > 0){
+
+            this.soni = newSoni;
+        } else{
+
+            System.out.println("Mahsulot musbat butun son bo'lishi kerak");
+        }
+    }
 }
+
+
+
+
+
+
+
 
 
 // Savat sinfini yaratamiz mavjud Mahsulotlarni yig'ish umumiy narx, chegirmani chiqarish uchun
