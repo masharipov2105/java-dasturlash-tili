@@ -34,5 +34,23 @@ public class Main{
 
             System.out.println(error.getMessage());
         }
+
+        // Massivning mavjud bo'lmagan indexsiga yani uzunligidan tashqaridagi indexsiga murojjatni sinab ko'ramiz
+        // xatolikni kuzatamiz
+
+        int[] massiv = new int[5];
+
+        //System.out.println(massiv[10]);
+
+        //Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 10 out of bounds for length 5
+	//at Main.main(Main.java:41)
+
+        try{
+
+            System.out.println(massiv[10]);
+        } catch (ArrayIndexOutOfBoundsException error){
+
+            System.out.println(error.getMessage());
+        }
     }
 }
