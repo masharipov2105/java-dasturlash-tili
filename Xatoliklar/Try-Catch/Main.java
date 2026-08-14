@@ -69,5 +69,26 @@ public class Main{
 
             System.out.println(error.getMessage());
         }
+
+        // matnni songa aylantirishga urinib ko'ramiz
+        // xatolikni kuzatamiz
+        String str_num = "123a";
+        //int int_num = Integer.parseInt(str_num);
+
+        /*
+        Exception in thread "main" java.lang.NumberFormatException: For input string: "123a"
+        	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+        	at java.base/java.lang.Integer.parseInt(Integer.java:668)
+        	at java.base/java.lang.Integer.parseInt(Integer.java:786)
+        	at Main.main(Main.java:76)
+        */
+
+        try{
+
+        int int_num = Integer.parseInt(str_num);
+        } catch (NumberFormatException error){
+
+            System.out.println(error.getMessage());
+        }
     }
 }
