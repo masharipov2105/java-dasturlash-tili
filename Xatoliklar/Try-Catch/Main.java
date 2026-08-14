@@ -52,5 +52,22 @@ public class Main{
 
             System.out.println(error.getMessage());
         }
+
+        // matn ustida ham null qiymatining uzunligini olisha urinib ko'ramiz
+        // xatolikni kuzatamiz
+        String matn = null;
+
+        //System.out.println(matn.length());
+
+        //Exception in thread "main" java.lang.NullPointerException: Cannot invoke "String.length()" because "<local4>" is null
+	//at Main.main(Main.java:59)
+
+        try{
+
+            System.out.println(matn.length());
+        } catch (NullPointerException error){
+
+            System.out.println(error.getMessage());
+        }
     }
 }
