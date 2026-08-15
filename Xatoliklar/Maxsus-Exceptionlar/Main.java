@@ -28,7 +28,7 @@ public class Main{
 }
 
 
-// Yosh tekshiruvbi asosida o'z exceptionmizini yozamiz
+// Yosh tekshiruvi asosida o'z exceptionmizini yozamiz
 // RuntimeExceptiondan meros olib dastur ishga tushgan vaqtida xatoliklar kuzatiladigan bo'ladi
 // messageimizni parentni konstruktoriga yuboramiz
 
@@ -40,9 +40,34 @@ class smallAgeException extends RuntimeException{
     }
 }
 
+
+// bo'sh ism va ism uzunligibo'yicha xatolikni nazorat qilish uchun o'z exceptionimizni yozamiz
+// RuntimeExceptiondan meros olamiz
+// messagemizni parent konstruktoriga yuboramiz
+
+class emptyNameException extends RuntimeException{
+
+    public emptyNameException(String message){
+
+        super(message);
+    }
+}
+
+// ism uzunligini nazorat qilish uchun o'z exceptionmizini yozamiz
+// RuntimeExceptiondan meros olamiz
+
+class smallLengthException extends RuntimeException{
+
+    public smallLengthException(String message){
+
+        super(message);
+    }
+}
+
+
 // Student nomli class yaratamiz
 // aynan setAge metodida smallAgeExceptiondan foydalaanmiz
-
+// setName uchun emptyNameException va smallLengthException lardan foydalanamiz
 class Student{
 
     // o'ziga xos fieldslarini tahskil qilamiz
@@ -76,14 +101,16 @@ class Student{
         this.age = newAge;
     }
 
-    public void setName(String newName){
+    public void setName(String newName) throws emptyNameException, smallLengthException{
 
-        if (!newName.isEmpty() && newName != null){
+        if (newName.isEmpty() || newName == null){
 
-            this.name = newName;
-        } else{
+            throw new emptyNameException("ism bo'sh bo'lishi mumkin emas");
+        } else if (newName.length() < 2){
 
-            System.out.println("Ism bo'sh bo'lmasligi kerak");
+            throw new smallLengthException("Ism uzunligi 2 begidan kichik bo'la olmaydi");
         }
+
+        this.name = newName;
     }
 }
