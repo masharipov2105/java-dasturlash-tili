@@ -12,7 +12,18 @@ public class Main{
 
     public static void main(String[] args){
 
+        // Student sinfimizni tekshirib test qilamiz
+        Student student1 = new Student("Alisher");
 
+        System.out.println(student1.getName() + " " + student1.getAge()); // dastlabki xolat
+        //student1.setAge(17); // Runtimeda xatoik chiqarishi kerak
+        try{
+
+            student1.setAge(17);
+        } catch (smallAgeException error){
+
+            System.out.println(error.getMessage());
+        }
     }
 }
 
