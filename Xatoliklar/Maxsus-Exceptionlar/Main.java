@@ -29,3 +29,50 @@ class smallAgeException extends RuntimeException{
     }
 }
 
+// Student nomli class yaratamiz
+// aynan setAge metodida smallAgeExceptiondan foydalaanmiz
+
+class Student{
+
+    // o'ziga xos fieldslarini tahskil qilamiz
+    private int age = 18;
+    private String name;
+
+    // konstruktorni tashkil qilamiz
+    public Student(String name_){
+
+        this.name = name_;
+    }
+
+    // getter setterlarni sozlaymiz
+    public int getAge(){
+
+        return this.age;
+    }
+
+    public String getName(){
+
+        return this.name;
+    }
+
+    public void setAge(int newAge) throws smallAgeException{
+
+        if (newAge < 18){
+
+            throw new smallAgeException("yosh 18 kichik bo'lmasligi kerak, kiritlgan yosh: " + newAge);
+        }
+
+        this.age = newAge;
+    }
+
+    public void setName(String newName){
+
+        if (!newName.isEmpty() && newName != null){
+
+            this.name = newName;
+        } else{
+
+            System.out.println("Ism bo'sh bo'lmasligi kerak");
+        }
+    }
+}
