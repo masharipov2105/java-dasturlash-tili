@@ -17,10 +17,23 @@ public class Main{
 
         System.out.println(student1.getName() + " " + student1.getAge()); // dastlabki xolat
         //student1.setAge(17); // Runtimeda xatoik chiqarishi kerak
+        //student1.setName(null); // runtimeda xatolik berishi kerak
         try{
 
             student1.setAge(17);
         } catch (smallAgeException error){
+
+            System.out.println(error.getMessage());
+        }
+
+        try{
+
+            student1.setName("S");
+
+        } catch (emptyNameException error){
+
+            System.out.println(error.getMessage());
+        } catch (smallLengthException error){
 
             System.out.println(error.getMessage());
         }
@@ -103,7 +116,7 @@ class Student{
 
     public void setName(String newName) throws emptyNameException, smallLengthException{
 
-        if (newName.isEmpty() || newName == null){
+        if  (newName == null || newName.isEmpty()){
 
             throw new emptyNameException("ism bo'sh bo'lishi mumkin emas");
         } else if (newName.length() < 2){
