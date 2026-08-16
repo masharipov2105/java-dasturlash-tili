@@ -40,5 +40,18 @@ public class Main{
         array_list.remove(4); // 4-element: Tarvuz ni o'chirish
         System.out.println("array_list = " + array_list);
 
+        // elemtni indexsidan tashqari uning qiymati asosida ham o'chirihs mumkin
+        array_list.remove("Olma"); // Olma qiymatiga ega elementni o'chirish
+        System.out.println("array_list = " + array_list);
+
+        // ro'yxatning uzunligini ko'rish
+        System.out.println("array_list.size() = " + array_list.size());
+
+        //ro'yxatni bosh yoki bo'sh emasligini tekshirish
+        System.out.println("array_list.isEmpty() = " + array_list.isEmpty());
+
+        // BIror indexdagi elemtning qiymatini yangilash imkoniyati
+        array_list.set(0, "Nok");
+        System.out.println("array_list = " + array_list);
     }
 }
