@@ -53,5 +53,19 @@ public class Main{
         // BIror indexdagi elemtning qiymatini yangilash imkoniyati
         array_list.set(0, "Nok");
         System.out.println("array_list = " + array_list);
+
+        // elementni izlash yani qiymatga mos eleemntni ro'yxat boshida yo oxiridan izlab indexisni chop etish mumkin
+        // indexOf metodi kiritilgan qiymatga mos datlabki natijani ro'yxat boshida izlaydi
+        array_list.add(1, "Banan");
+        array_list.add("Banan");
+
+        System.out.println("array_list dagi ro'yxat boshidan izlangandagi ilk natija: " + array_list.indexOf("Banan"));
+        System.out.println("array_list dagi ro'yxat oxiridan izlangandagi ilk natija: " + array_list.lastIndexOf("Banan"));
+
+        // malum bir qiymatga teng element ro'yxatda borligini aniqlash
+        System.out.println("array_list? Banan " + array_list.contains("Banan"));
+
+        // ro'yxatni butunlay tozalash
+        array_list.clear(); // barcha elementlarni yo'q qilib ro'yxatni boshatish
     }
 }
