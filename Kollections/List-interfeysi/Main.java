@@ -35,5 +35,10 @@ public class Main{
 
         // index bo'yicha elemenni o'qish mumkin
         System.out.println("array_list[1] = " + array_list.get(1));
+
+        // istalgan indexdagi elementni o'chirish
+        array_list.remove(4); // 4-element: Tarvuz ni o'chirish
+        System.out.println("array_list = " + array_list);
+
     }
 }
