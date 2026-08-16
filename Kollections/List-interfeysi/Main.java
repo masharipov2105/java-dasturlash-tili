@@ -28,5 +28,12 @@ public class Main{
 
         // ro'yxatni chop etish
         System.out.println("array_list = " + array_list);
+
+        // yangi elemntni istalgan indexga qo'shishimiz mumkin
+        array_list.add(0, "Shaftoli");
+        System.out.println("array_list = " + array_list);
+
+        // index bo'yicha elemenni o'qish mumkin
+        System.out.println("array_list[1] = " + array_list.get(1));
     }
 }
