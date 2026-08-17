@@ -4,12 +4,17 @@
     -ArrayList ko'p o'qish amaliyoti bajariladigan tizimlarda o'z samaradorigi bilan ajralib turadi
     -Arraylist ko'p o'qishdan tashqari oxiriga yozish jarayonida ham o'z tezligi bilan qolgan ro'yxatlardan farqlanadi
 
+    -LinkedList bu ArrayListdan farqli ravishda elemetlarini saqlashda elementning o'zidan oldingi va keyingi elemtga yo'lni ham saqlaydi
+    -LinkedList shu sabali ham ArrayListag nisbatan ko'piroq xotira talab qiladi
+    -LinkedListning asosiy kuchli tomonlari ko'p malumotlar ro'yxat boshi va oxiriga qo'shish va o'chirish amali juda tez
+    -LinkedList ning kamchiliklari malumotni index bo'yicha o'qish sekin, ArrayListga nisbatan
 
 */
 
 // kerakli modullarni dasturimiz bilan bog'laymiz
 import java.util.List;
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class Main{
 
@@ -67,5 +72,15 @@ public class Main{
 
         // ro'yxatni butunlay tozalash
         array_list.clear(); // barcha elementlarni yo'q qilib ro'yxatni boshatish
+
+
+        //=========================================================================================================
+        //=========================================================================================================
+        //=========================================================================================================
+
+        // LinkedList bo'yicha amaliy kod
+        // LinkedListni yaratish va uning asosiy metodlari bilan tanishuv
+
+        List<String> linked_list = new LinkedList<>(); // LinkedList ro'yxatini yaratish
     }
 }
