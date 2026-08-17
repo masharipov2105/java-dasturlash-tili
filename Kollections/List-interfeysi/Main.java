@@ -86,6 +86,10 @@ public class Main{
         // LinkedList ro'yxatiga ma'lumot qo'shish usullari
         linked_list.add("Rezistor"); // indeks ko'rsatilmagan, avtomatik ro'yxat oxiriga qo'shadi
         linked_list.add(1, "Kondensator"); // indeksni aniq ko'rsatgan xolda ma'lumot qo'shish
+        linked_list.add("Induktor");
+        linked_list.add("Tranzistor");
+        linked_list.add("Op-Amp");
+        linked_list.add("KOmparator");
 
         System.out.println("linked_list = " + linked_list);
 
@@ -95,5 +99,13 @@ public class Main{
         String l3 = linked_list.getLast(); // LinkedListning o'ziga xos tezkor metodi, ro'yxat oxiridagi elemtni olish
 
         System.out.println("linked_list: " + l1 + " " + l2 + " " + l3);
+
+        // Ma'lumotlari o'chirish usullari
+        linked_list.remove("Op-Amp"); // ro'yxatdahi elemtni qiymati asosida o'chirish
+        linked_list.remove(0); // ro'yxatdagi elementni indeksi asosida o'chirish
+        linked_list.removeFirst(); // linkedListning o'ziga xos tezkor metodi, ro'yxat boshidagi elementni o'chiradi
+        linked_list.removeLast(); // linkedListning o'ziga xos tezkor metodi, ro'yxat oxiridagi elementni o'chiradi
+
+        System.out.println("linked_list = " + linked_list);
     }
 }
