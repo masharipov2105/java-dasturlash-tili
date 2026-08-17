@@ -82,5 +82,11 @@ public class Main{
         // LinkedListni yaratish va uning asosiy metodlari bilan tanishuv
 
         List<String> linked_list = new LinkedList<>(); // LinkedList ro'yxatini yaratish
+
+        // LinkedList ro'yxatiga ma'lumot qo'shish usullari
+        linked_list.add("Rezistor"); // indeks ko'rsatilmagan, avtomatik ro'yxat oxiriga qo'shadi
+        linked_list.add(1, "Kondensator"); // indeksni aniq ko'rsatgan xolda ma'lumot qo'shish
+
+        System.out.println("linked_list = " + linked_list);
     }
 }
