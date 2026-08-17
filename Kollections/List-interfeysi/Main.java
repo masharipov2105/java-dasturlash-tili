@@ -113,5 +113,9 @@ public class Main{
         System.out.println("linked_list.isEmpty() " + linked_list.isEmpty()); // ro'yxat bo'shligini tekshiradi
         System.out.println("linked_list.contains('Komparator') " + linked_list.contains("Komparator")); // ro'yxatda kiritilgan qiymatga mos element borligini tekshiradi
 
+        // ma'lumotni yangilash usullari
+        linked_list.set(0, "Transformator"); // ro'yxatning 0 indeksidagi eleemt qiymati joriy qiymatga o'zgartiradi
+
+        System.out.println("linked_list = " + linked_list);
     }
 }
