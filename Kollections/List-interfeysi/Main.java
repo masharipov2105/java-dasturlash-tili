@@ -117,5 +117,12 @@ public class Main{
         linked_list.set(0, "Transformator"); // ro'yxatning 0 indeksidagi eleemt qiymati joriy qiymatga o'zgartiradi
 
         System.out.println("linked_list = " + linked_list);
+
+        // ro'yxatda ma'lumotni izlash usullari
+        int l4 = linked_list.indexOf("Transformator"); // ro'yxatda birinchi uchiragan element indeksini qaytaradi
+        int l5 = linked_list.lastIndexOf("Tranzistor"); // ro'yxatda oxirgi uchiragan element indeksini qaytaradi
+
+        System.out.println("linked_list: " + l4 + " " + l5);
+
     }
 }
