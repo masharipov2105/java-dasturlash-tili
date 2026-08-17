@@ -81,12 +81,19 @@ public class Main{
         // LinkedList bo'yicha amaliy kod
         // LinkedListni yaratish va uning asosiy metodlari bilan tanishuv
 
-        List<String> linked_list = new LinkedList<>(); // LinkedList ro'yxatini yaratish
+        LinkedList<String> linked_list = new LinkedList<>(); // LinkedList ro'yxatini yaratish
 
         // LinkedList ro'yxatiga ma'lumot qo'shish usullari
         linked_list.add("Rezistor"); // indeks ko'rsatilmagan, avtomatik ro'yxat oxiriga qo'shadi
         linked_list.add(1, "Kondensator"); // indeksni aniq ko'rsatgan xolda ma'lumot qo'shish
 
         System.out.println("linked_list = " + linked_list);
+
+        // Ma'lumotni o'qish usullari
+        String l1 = linked_list.get(0); // indeks bo'yicha ma'lumotni o'qish
+        String l2 = linked_list.getFirst(); // LinkedListning o'ziga xos tezkor metodi, ro'yxat boshidagi elemtni olish
+        String l3 = linked_list.getLast(); // LinkedListning o'ziga xos tezkor metodi, ro'yxat oxiridagi elemtni olish
+
+        System.out.println("linked_list: " + l1 + " " + l2 + " " + l3);
     }
 }
