@@ -107,5 +107,11 @@ public class Main{
         linked_list.removeLast(); // linkedListning o'ziga xos tezkor metodi, ro'yxat oxiridagi elementni o'chiradi
 
         System.out.println("linked_list = " + linked_list);
+
+        // ro'yxat haqida ma'lumot beruvchi metodlar
+        System.out.println("linked_list.size() " + linked_list.size()); // ro'yxatning uzunligi
+        System.out.println("linked_list.isEmpty() " + linked_list.isEmpty()); // ro'yxat bo'shligini tekshiradi
+        System.out.println("linked_list.contains('Komparator') " + linked_list.contains("Komparator")); // ro'yxatda kiritilgan qiymatga mos element borligini tekshiradi
+
     }
 }
