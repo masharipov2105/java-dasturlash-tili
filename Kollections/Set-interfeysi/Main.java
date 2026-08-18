@@ -18,5 +18,15 @@ public class Main{
         // HashSet ro'yxatini tayinlash
         HashSet<String> hash_set = new HashSet<>();
 
+        // HashSetga ma'lumot qo'shish usullari
+        // ushbu metod boolean qiymati qaytaradi, agar elemet unikal bo'lsa ture, yani element qo'shildi
+        // agar false qiymat qaytarsa demak elementni allaqachon dublikati bor, va bu element qayta qo'shilmaydi
+        hash_set.add("Ruchka");
+        hash_set.add("Qalam");
+        hash_set.add("Daftar");
+        hash_set.add("Qog'oz");
+        hash_set.add("Daftar");
+
+        System.out.println("hash_set = " + hash_set);
     }
 }
