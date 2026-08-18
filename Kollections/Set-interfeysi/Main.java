@@ -65,5 +65,8 @@ public class Main{
         boolean natija2 = hash_set.containsAll(hash_set2);
         System.out.println("hash_set.contaisnAll(hash_set2) = " + natija2);
 
+        // faqat berilgan ro'yxatdagi elemetlarni qoldirish
+        hash_set.retainAll(hash_set2);
+        System.out.println("hash_set.retainAll(hash_set2) = " + hash_set);
     }
 }
