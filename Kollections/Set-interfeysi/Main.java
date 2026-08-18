@@ -28,5 +28,10 @@ public class Main{
         hash_set.add("Daftar");
 
         System.out.println("hash_set = " + hash_set);
+
+        //ma'lumotni ro'yxatdan o'chirib tashlash usullari
+        hash_set.remove("Ruchka");
+
+        System.out.println("hash_set = " + hash_set);
     }
 }
