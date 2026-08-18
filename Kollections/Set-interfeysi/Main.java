@@ -37,5 +37,11 @@ public class Main{
         // ro'yxat ichida joriy qiymatga mos element borligini tekshirish
         boolean natija = hash_set.contains("Daftar");
         System.out.println("hash_set.contains('Daftar') = " + natija);
+
+        // ro'yxat haqida ma'lumot beruvchi metodlar bilan tanishuv
+        int uzunlik = hash_set.size();
+        boolean mavjudmi = hash_set.isEmpty();
+
+        System.out.println("hash_set.size() = " + uzunlik + "; hash_set.isEmpty() = " + mavjudmi);
     }
 }
