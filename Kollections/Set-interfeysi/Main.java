@@ -33,5 +33,9 @@ public class Main{
         hash_set.remove("Ruchka");
 
         System.out.println("hash_set = " + hash_set);
+
+        // ro'yxat ichida joriy qiymatga mos element borligini tekshirish
+        boolean natija = hash_set.contains("Daftar");
+        System.out.println("hash_set.contains('Daftar') = " + natija);
     }
 }
