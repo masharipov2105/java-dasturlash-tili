@@ -65,8 +65,31 @@ public class Main{
         boolean natija2 = hash_set.containsAll(hash_set2);
         System.out.println("hash_set.contaisnAll(hash_set2) = " + natija2);
 
+        hash_set.add("Ruchka");
+        hash_set.add("Qalam");
+        hash_set.add("Daftar");
+        hash_set.add("Qog'oz");
+        hash_set.add("Daftar");
+
         // faqat berilgan ro'yxatdagi elemetlarni qoldirish
         hash_set.retainAll(hash_set2);
         System.out.println("hash_set.retainAll(hash_set2) = " + hash_set);
+
+        // hash_set ni ro'yxatga aylantirish
+
+        hash_set.add("Ruchka");
+        hash_set.add("Qalam");
+        hash_set.add("Daftar");
+        hash_set.add("Qog'oz");
+        hash_set.add("Daftar");
+
+        String[] str_array = hash_set.toArray(new String[0]);
+
+        for (String i : str_array){
+
+            System.out.print(i + " ");
+        }
+        System.out.println();
+
     }
 }
