@@ -15,5 +15,12 @@ public class Main{
 		
 		// Bo'sh HashMap ro'yxatini yaratish
 		Map<String, Integer> hash_map = new HashMap<>();
+		
+		// ro'yxatga ma'lumot qo'shish
+		hash_map.put("Bir", 1);
+		hash_map.put("Ikki", 2);
+		hash_map.put("Uch", 3);
+		hash_map.put("Olma", 4);
+		hash_map.put("Anjir", 10);
 	}
 }
