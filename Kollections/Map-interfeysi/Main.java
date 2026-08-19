@@ -32,5 +32,12 @@ public class Main{
 		// ro'yxatdagi biror kalit-qiymat juftligini o'chirish
 		hash_map.remove("Bir");
 		System.out.println(hash_map);
+		
+		//joriy kalit va qiymat ro'yxatda borligini tekshirish
+		boolean bormi = hash_map.containsKey("Yetti"); // Kalit asosida tekshiruv
+		System.out.println("hash_map.contanisKey('Yetti') = " + bormi);
+		
+		boolean qiymat_b = hash_map.containsValue(10); // Qiymat asosida tekshiruv
+		System.out.println("hash_map.containsValue(10) = " + qiymat_b);
 	}
 }
