@@ -28,5 +28,9 @@ public class Main{
 		// ro'yxatdagi ma'lumotni o'qish
 		int qiymat = hash_map.get("Olma");
 		System.out.println("hash_map.get('Olma') = " + qiymat);
+		
+		// ro'yxatdagi biror kalit-qiymat juftligini o'chirish
+		hash_map.remove("Bir");
+		System.out.println(hash_map);
 	}
 }
