@@ -59,5 +59,10 @@ public class Main{
 		
 		System.out.println("hash_map.isEmpty() = " + hash_map.isEmpty());
 		
+		// hash_map ro'yxatida ma'lumotlarni yangilash metodi
+		
+		hash_map.replace("Anjir", 7); // "Anjirn" kalitida turgan qiymatni 7 ga yangiladik
+		
+		System.out.println(hash_map);
 	}
 }
