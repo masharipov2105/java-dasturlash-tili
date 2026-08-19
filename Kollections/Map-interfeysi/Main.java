@@ -22,5 +22,11 @@ public class Main{
 		hash_map.put("Uch", 3);
 		hash_map.put("Olma", 4);
 		hash_map.put("Anjir", 10);
+		
+		System.out.println(hash_map);
+		
+		// ro'yxatdagi ma'lumotni o'qish
+		int qiymat = hash_map.get("Olma");
+		System.out.println("hash_map.get('Olma') = " + qiymat);
 	}
 }
