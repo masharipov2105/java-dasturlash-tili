@@ -53,6 +53,11 @@ public class Main{
 		}
 		System.out.println();
 		
+		// ro'yxat haqida ma'lumotlarni qaytaruvchi metodlar
+		
+		System.out.println("hash_map.size() = " + hash_map.size());
+		
+		System.out.println("hash_map.isEmpty() = " + hash_map.isEmpty());
 		
 	}
 }
