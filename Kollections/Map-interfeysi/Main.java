@@ -39,5 +39,20 @@ public class Main{
 		
 		boolean qiymat_b = hash_map.containsValue(10); // Qiymat asosida tekshiruv
 		System.out.println("hash_map.containsValue(10) = " + qiymat_b);
+		
+		//barcha kalitlar yoli qiymatlar ro'yxatlarini olosh
+		System.out.print("kalitlar = ");
+		for(String key: hash_map.keySet()){
+			System.out.print(key + ", ");
+		}
+		System.out.println();
+		
+		System.out.print("qiymatlar = ");
+		for(Integer vals: hash_map.values()){
+			System.out.print(vals + ", ");
+		}
+		System.out.println();
+		
+		
 	}
 }
