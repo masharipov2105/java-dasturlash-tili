@@ -64,5 +64,11 @@ public class Main{
 		hash_map.replace("Anjir", 7); // "Anjirn" kalitida turgan qiymatni 7 ga yangiladik
 		
 		System.out.println(hash_map);
+		
+		//ro'yxatni butkul tozalab bo'shatish
+		
+		hash_map.clear();
+		System.out.println("hash_map = " + hash_map);
+		
 	}
 }
