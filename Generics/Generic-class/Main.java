@@ -6,6 +6,9 @@
 
 */
 
+//kerakli modullarni dasturimizga bog'lash
+import java.util.ArrayList;
+
 public class Main{
 	
 	public static void main(String[] arga){
@@ -82,7 +85,21 @@ class XotiraArray<T>{
 	
 	//xususiyatlar
 	private T kontent;
-	private T[] royxat;
-	private int olcham = 0;
+	private ArrayList<T> royxat;
 	
+	//konstruktorni tayinlaymiz
+	public XotiraArray(){} // bo'sh konstruktor, asosiy amallar metodlar yordamida bakariladi
+	
+	//ro'yxatga ma'lumot qo'shish metodi
+	public void put(T value){
+		
+		this.royxat.add(value);
+	}
+	
+	//ro'yxatimizga malimot qo'shish metodi overloading
+	
+	public void put(int indeks, T value){
+		
+		this.royxat.add(indeks, value);
+	}
 }
