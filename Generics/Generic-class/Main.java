@@ -46,6 +46,12 @@ public class Main{
 		System.out.println(a1.get(0));
 		System.out.println(a1.get(1));
 		
+		a1.drop(0);
+		
+		System.out.println(0);
+		
+		System.out.println(a1.toString());
+		
 	}
 }
 
@@ -116,5 +122,20 @@ class XotiraArray<T>{
 	public T get(int indeks){
 		
 		return royxat.get(indeks);
+	}
+	
+	//malumotni indeks asosida o'chirish metodi
+	public void drop(int indeks){
+		
+		this.royxat.remove(indeks);
+	}
+	
+	// to'liq ro'yxatninqaytaruvchi metod
+	//toStrimg metodini overriding qilamiz
+	
+	@Override
+	public String toString(){
+		
+		return this.royxat+"";
 	}
 }
