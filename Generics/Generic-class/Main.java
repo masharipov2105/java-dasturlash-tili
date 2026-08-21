@@ -10,6 +10,12 @@ public class Main{
 	
 	public static void main(String[] arga){
 		
+		//testing...
+		
+		Xotira<String> x_1 = new Xotira<>();
+		x_1.put("element_1");
+
+		System.out.println(x_1.get());
 		
 	}
 }
@@ -20,7 +26,7 @@ public class Main{
 
 class Xotira<T> {
 	//T hali nomalum tbo'lgan turni ofoda etuvchi tip.
-	private T kontent;
+	private T kontent = null;
 	
 	// konstruktorni tayinlaymiz
 	public Xotira(){} //parametrsiz
@@ -38,4 +44,10 @@ class Xotira<T> {
 		return this.kontent;
 	}
 	
+	// qiymatni aniq va tushinarli shaklda chop etish uchun toString merodini oveeriding qilamiz
+	@Override
+	public String toString(){
+		
+		return this.kontent+"";
+	}
 }
