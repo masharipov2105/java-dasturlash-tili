@@ -32,4 +32,10 @@ class Xotira<T> {
 		this.kontent = qiymat;
 	}
 	
+	// qiymatlarni o'qish uchun get metodi
+	public T get(){
+		
+		return this.kontent;
+	}
+	
 }
