@@ -10,7 +10,7 @@ public class Main{
 	
 	public static void main(String[] arga){
 		
-		//testing...
+		//testing... String
 		
 		Xotira<String> x_1 = new Xotira<>();
 		x_1.put("element_1");
@@ -20,6 +20,18 @@ public class Main{
 		x_1.remove();
 		
 		System.out.println(x_1);
+		
+		// testing Integer
+		
+		Xotira<Integer> x_2 = new Xotira<>();
+		
+		x_2.put(17);
+		
+		System.out.println(x_2);
+		
+		x_2.remove();
+		
+		System.out.println(x_2);
 		
 	}
 }
