@@ -25,4 +25,11 @@ class Xotira<T> {
 	// konstruktorni tayinlaymiz
 	public Xotira(){} //parametrsiz
 	
+	//put metodini yaratamiz
+	//ma'lumot qo'shish metodi
+	public void put(T qiymat){
+		
+		this.kontent = qiymat;
+	}
+	
 }
