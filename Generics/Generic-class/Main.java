@@ -73,3 +73,16 @@ class Xotira<T> {
 		return this.kontent+"";
 	}
 }
+
+//XotiraArray sinfini yaratamiz
+//Maxsus kollektion quramiz
+//malumotlar doim ro'yxat oxiriga qo'shilib boradi
+
+class XotiraArray<T>{
+	
+	//xususiyatlar
+	private T kontent;
+	private T[] royxat;
+	private int olcham = 0;
+	
+}
