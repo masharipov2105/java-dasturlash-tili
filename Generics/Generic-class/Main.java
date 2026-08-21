@@ -52,6 +52,20 @@ public class Main{
 		
 		System.out.println(a1.toString());
 		
+		
+		// testing... XotiraArray... Integer
+		
+		XotiraArray<Integer> a2 = new XotiraArray<>();
+		
+		a2.put(255);
+		a2.put(1, 378);
+		
+		System.out.println(a2.get(0));
+		System.out.println(a2.get(1));
+		
+		System.out.println(a2);
+		
+		
 	}
 }
 
