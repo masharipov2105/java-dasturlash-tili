@@ -36,6 +36,16 @@ public class Main{
 		
 		System.out.println(x_2);
 		
+		// testing... XotiraArrat... String
+		
+		XotiraArray<String> a1 = new XotiraArray<>();
+		
+		a1.put("Baki");
+		a1.put(1, "Alibek");
+		
+		System.out.println(a1.get(0));
+		System.out.println(a1.get(1));
+		
 	}
 }
 
@@ -84,11 +94,10 @@ class Xotira<T> {
 class XotiraArray<T>{
 	
 	//xususiyatlar
-	private T kontent;
 	private ArrayList<T> royxat;
 	
 	//konstruktorni tayinlaymiz
-	public XotiraArray(){} // bo'sh konstruktor, asosiy amallar metodlar yordamida bakariladi
+	public XotiraArray(){this.royxat = new ArrayList<>();} // bo'sh konstruktor, asosiy amallar metodlar yordamida bakariladi
 	
 	//ro'yxatga ma'lumot qo'shish metodi
 	public void put(T value){
@@ -101,5 +110,11 @@ class XotiraArray<T>{
 	public void put(int indeks, T value){
 		
 		this.royxat.add(indeks, value);
+	}
+	
+	// indeks bo'yicha malumot o'qish metodi
+	public T get(int indeks){
+		
+		return royxat.get(indeks);
 	}
 }
