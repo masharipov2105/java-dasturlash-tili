@@ -17,6 +17,10 @@ public class Main{
 
 		System.out.println(x_1.get());
 		
+		x_1.remove();
+		
+		System.out.println(x_1);
+		
 	}
 }
 
@@ -42,6 +46,12 @@ class Xotira<T> {
 	public T get(){
 		
 		return this.kontent;
+	}
+	
+	//ma'lumotni o'chiruvchi remove() metodi
+	public void remove(){
+		
+		this.kontent = null;
 	}
 	
 	// qiymatni aniq va tushinarli shaklda chop etish uchun toString merodini oveeriding qilamiz
