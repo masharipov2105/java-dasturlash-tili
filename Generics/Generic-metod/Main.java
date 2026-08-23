@@ -32,6 +32,10 @@ public class Main{
             System.out.print(i + " ");
         }
         System.out.println();
+
+        System.out.println(maximum(3, 3.14));
+        System.out.println(maximum(2.71f, 2.71f));
+        System.out.println(maximum(12, -7));
     }
 
     // parametr sifatida berilgan argumetlarni string ko'riinishida qo'shish
@@ -51,7 +55,24 @@ public class Main{
         array[indx1] = array[indx2];
         array[indx2] = helper;
     }
+
+    // Number sinfiga tegishli tiplar bilan ishlaydigan metod
+    // 2ta parametr qiymatlarini taqqoslab kattasini qaytaradi
+    public static <T extends Number> double maximum(T num1, T num2){
+
+        Double result = Double.valueOf("0.0");
+
+        if (num1.doubleValue() > num2.doubleValue()){
+
+            result = num1.doubleValue();
+        } else if (num1.doubleValue() < num2.doubleValue()){
+
+            result = num2.doubleValue();
+        } else if (num1.doubleValue() == num2.doubleValue()){
+
+            result = 0.0;
+        }
+        return result;
+    }
+
 }
-
-
-
