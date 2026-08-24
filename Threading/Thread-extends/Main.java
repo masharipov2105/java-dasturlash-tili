@@ -19,5 +19,10 @@ public class Main{
 
 class MyThread extends Thread{
 	
-	
+	//run metodini ovveriding qilamiz
+	@Override
+	public void run(){
+		
+		// asinxron kodimizni shu blokka yozamiz
+	}
 }
