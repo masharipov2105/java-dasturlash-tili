@@ -10,6 +10,9 @@ public class Main{
 	
 	public static void main(String[] args){
 		
+		//MyThread t1 = new MyThread();
+		//t1.start();
+		
 		
 	}
 }
@@ -24,5 +27,17 @@ class MyThread extends Thread{
 	public void run(){
 		
 		// asinxron kodimizni shu blokka yozamiz
+		//oddiy sikl ypzib har bir iteratsiya bakarilishi uchun 1 soniya kutamiz
+		for (int i = 0; i < 5; i ++){
+			
+			System.out.println("MyThread run: " + i);
+			try{
+			
+			    Thread.sleep(1000);
+		    } catch (Exception e){
+			
+			    e.printStackTrace();
+	    	}
+		}
 	}
 }
