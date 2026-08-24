@@ -10,9 +10,22 @@ public class Main{
 	
 	public static void main(String[] args){
 		
-		//MyThread t1 = new MyThread();
-		//t1.start();
+		MyThread t1 = new MyThread();
+		t1.start();
 		
+		// asosiy Main threadi
+		// bu qatordagi kod satrlari MyThread kodi to'liq bajarilishini kutmasdan davom etadi
+		for (int i = 0; i < 5; i ++){
+			
+			System.out.println("MainThread run: " + i);
+			try{
+			
+			    Thread.sleep(100);
+		    } catch (Exception e){
+			
+			    e.printStackTrace();
+	    	}
+		}
 		
 	}
 }
@@ -33,7 +46,7 @@ class MyThread extends Thread{
 			System.out.println("MyThread run: " + i);
 			try{
 			
-			    Thread.sleep(1000);
+			    Thread.sleep(100);
 		    } catch (Exception e){
 			
 			    e.printStackTrace();
