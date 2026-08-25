@@ -33,9 +33,6 @@ public class Main{
             }
         };
 
-        // interfeys ichidagi kodni sinxron tarzda oddiy chaqirib ko'ramiz
-        task1.run();
-
 
 
         // task2 jarayonini while sikli namunasi asosida qurib olamiz
@@ -62,6 +59,12 @@ public class Main{
                 }
             }
         };
+
+        // task2 ni Thread yordamida asinxron ishga tushiramiz
+        new Thread(task2).start(); // yangi threadda ishga tushiramiz
+
+        // task1 ni Main threadni o'zida ishga tushiramiz
+        task1.run();
     }
 }
 
