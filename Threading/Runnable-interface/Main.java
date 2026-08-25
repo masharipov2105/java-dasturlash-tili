@@ -28,6 +28,9 @@ public class Main{
                 }
             }
         };
+
+        // interfeys ichidagi kodni sinxron tarzda oddiy chaqirib ko'ramiz
+        task1.run();
     }
 }
 
