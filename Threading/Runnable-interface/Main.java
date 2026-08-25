@@ -11,14 +11,48 @@ public class Main{
     public static void main(String[] args){
 
 
-        // Runnable interfeysi orqali sikl yaratamiz
+        // task1 ichida for sikli namunasi bilan bajarilishi uchun vaqt talab qiladigan dastur yozamiz
+        // task1 ni Threadsiz sinxron ishlashini ko'ramiz
         Runnable task1 = () -> {
 
-            for (int i = 0; i < 5; i ++){
+            // 15 ta iteratsiyaga ega osuvchi for sikli
+            for (int i = 0; i < 15; i ++){
 
-                System.out.println("Runnable jarayoni: " + i);
+                System.out.println("task1 jarayoni: " + i);
 
-                // Kutish rejimi Thread bilan
+                // har bir iteratsiya uchun kutish rejimi Thread bilan
+                try{
+
+                    // time sleep
+                    Thread.sleep(200);
+                } catch (Exception e){
+
+                    // Exception handling
+                    e.printStackTrace();
+                }
+            }
+        };
+
+        // interfeys ichidagi kodni sinxron tarzda oddiy chaqirib ko'ramiz
+        task1.run();
+
+
+
+        // task2 jarayonini while sikli namunasi asosida qurib olamiz
+        // task2 jarayonini Thread bilan asinxron ishlatib ko'ramiz
+        Runnable task2 = () -> {
+
+            // yordamchi o'zgaruvchi
+            int begin = 0;
+
+            // sikl yordamchi o'zgaruvchi 15 ga tenglashgunicha davom etadi
+            while (begin < 15){
+
+                System.out.println("task2 jarayoni: " + begin);
+
+                // har bir iteratsiyada o'zgaruvcgi qiymatini bittaga oshirish
+                begin ++;
+
                 try{
 
                     Thread.sleep(200);
@@ -28,9 +62,6 @@ public class Main{
                 }
             }
         };
-
-        // interfeys ichidagi kodni sinxron tarzda oddiy chaqirib ko'ramiz
-        task1.run();
     }
 }
 
