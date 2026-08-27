@@ -16,7 +16,12 @@ public class Main{
 
         // File classi yordamida o'zimizni mahalliy faylimizni obektga aylantiramiz
         // File sinfi faylni meta malumiotlarini olishga ham imkon beradi
-        File fayl_test = new File("test.txt");
+        File fayl = new File("test.txt");
 
+        // fayl haqida ma'lumotlar olish
+        System.out.println("fayl nomi: " + fayl.getName());
+        System.out.println("fayl yo'li: " + fayl.getPath());
+        System.out.println("absolut yo'li: " + fayl.getAbsolutePath());
+        System.out.println("fayl o'lchami: " + fayl.length() + " bayt");
     }
 }
