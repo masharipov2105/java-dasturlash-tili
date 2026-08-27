@@ -9,8 +9,11 @@
 // kerakli modullarni dasturimizga bog'laymiz
 import java.io.File;
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.FileReader;
+import java.io.FileWriter;
+
 public class Main{
 
     public static void main(String[] args){
@@ -37,5 +40,14 @@ public class Main{
                 System.out.println(line); // satrlarni chop etish
             }
         } catch(IOException e){ e.printStackTrace();}
+
+        // test2 fayli bilan aloqa o'rnatish
+        File fayl2 = new File("test2.txt");
+
+        try {
+            // BUfferedWriter yordamida nishon fayli 'br' nomli obektga aylantirilmoqda
+            BufferedWriter br = new BufferedWriter(new FileWriter(fayl2));
+
+        } catch (IOException e){e.printStackTrace();}
     }
 }
