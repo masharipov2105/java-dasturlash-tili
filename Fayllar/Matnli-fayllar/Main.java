@@ -13,6 +13,7 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.FileReader;
 import java.io.FileWriter;
+import java.util.ArrayList;
 
 public class Main{
 
@@ -39,6 +40,7 @@ public class Main{
 
                 System.out.println(line); // satrlarni chop etish
             }
+            br.close(); // readerni yopish
         } catch(IOException e){ e.printStackTrace();}
 
         // test2 fayli bilan aloqa o'rnatish
@@ -46,8 +48,32 @@ public class Main{
 
         try {
             // BUfferedWriter yordamida nishon fayli 'br' nomli obektga aylantirilmoqda
-            BufferedWriter br = new BufferedWriter(new FileWriter(fayl2));
+            BufferedWriter bw = new BufferedWriter(new FileWriter(fayl2));
 
+            BufferedReader br = new BufferedReader(new FileReader(fayl));
+            // test.txt faylida yozilgan ma'lumotni teskari tartibda test2 fayliga yozishga urinamiz
+            // test.txt faylidagi har bir satrni ArrayListga yuklab uni teskari taribda sikl bilan test2.txt ga yozamiz
+            ArrayList<String> list = new ArrayList<>(); // arrylist obektini yaratish
+
+            String satr;
+
+            while((satr = br.readLine()) != null) {
+
+                list.add(satr); // har bir satrni alohida element sifatida ro'yxatga qo'shish
+            }
+
+            for (int i = list.size() - 1; i >= 0; i --){
+
+                bw.write(list.get(i)); //list dan ma'lumotni o'qib yozish
+                bw.newLine(); // yangi satrga o'tish
+            }
+
+            // yozish amalini bajarish
+            bw.flush(); // buferdagi ma'lumotni faylga yozish
+            bw.close(); // writerni yopish
+            br.close(); // readerni yopish
+
+            System.out.println("Ma'lumot muvoffaqiyatli yozildi!");
         } catch (IOException e){e.printStackTrace();}
     }
 }
