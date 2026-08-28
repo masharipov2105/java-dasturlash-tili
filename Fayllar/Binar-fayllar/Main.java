@@ -51,11 +51,29 @@ public class Main{
 
             BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream("test2.dat")); //BuffedOutputStream obektini yaratish
 
-            byte[] data_ = {10, 20, 20, 40, 50}; // yozilishi kerak bo'lgan baytlar
+            byte[] data_ = {10, 20, 20, 40, 50, 60, 70, 80, 90, 100}; // yozilishi kerak bo'lgan baytlar
             bos.write(data_); // buferga yozish
             bos.flush(); // buferdagi ma'lumotni faylga yozish
             System.out.println("test2.dat fayliga ma'lumitlar yozildi");
         } catch (IOException e){
+
+            e.printStackTrace();
+        }
+
+        // BufferedInputStream yordamida binar faylni o'qish
+        try{
+
+            BufferedInputStream bis = new BufferedInputStream(new FileInputStream("test2.dat")); // BufferedInputStream obektini yaratish
+
+            byte[] bufer = new byte[bis.available()]; // o'qilayotgan baytlanri massivga saqlash uchun
+            int byte_read = bis.read(bufer); // o'qilayotgan baytlarni massivga joylash
+            // massivni sikl bilan o'qish
+            for (byte i : bufer){
+
+                System.out.print(i + " ");
+            }
+            System.out.println(); // yakuniy enter
+        } catch(IOException e){
 
             e.printStackTrace();
         }
