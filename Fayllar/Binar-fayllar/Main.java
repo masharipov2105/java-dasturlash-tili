@@ -20,11 +20,26 @@ public class Main{
         // binar faylga ma'lumot yozish
         try{
 
-            FileOutputStream fos = new FileOutputStream("test.dat"); // faylni obket sifatida qarash
+            FileOutputStream fos = new FileOutputStream("test.dat"); // faylni yozish uchun obektga aylantirish
             byte[] data = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29}; // yozilishi kerak bo'lgan bayt ma'lumotlar massivi
-            fos.write(data);
+            fos.write(data); // ma'lumotni yozish
             System.out.println("ma'lumtolar muvoffaqiyatli yozildi!");
         } catch (IOException e){
+
+            e.printStackTrace();
+        }
+
+        // Binar fayllni o'qishni ko'ramiz
+        try{
+
+            FileInputStream fis = new FileInputStream("test.dat"); // faylni o'qish uhcun obektga aylantirish
+            int data_line; // yordamichi o'zgaruvchi, har bir baytdagi ma'lumotni o'zida aks ettiradi
+            while ((data_line = fis.read()) != -1){
+
+                System.out.print(data_line + " "); // har bir iteratsiyadagi ma'lumotni chop etib boradi
+            }
+            System.out.println(); // yakuniy enter tashlash
+        } catch(IOException e){
 
             e.printStackTrace();
         }
