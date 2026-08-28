@@ -11,6 +11,8 @@
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.BufferedOutputStream;
+import java.io.BufferedInputStream;
 import java.io.IOException;
 
 public class Main{
@@ -40,6 +42,20 @@ public class Main{
             }
             System.out.println(); // yakuniy enter tashlash
         } catch(IOException e){
+
+            e.printStackTrace();
+        }
+
+        // Buferlash orqali binar faylni yozish
+        try{
+
+            BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream("test2.dat")); //BuffedOutputStream obektini yaratish
+
+            byte[] data_ = {10, 20, 20, 40, 50}; // yozilishi kerak bo'lgan baytlar
+            bos.write(data_); // buferga yozish
+            bos.flush(); // buferdagi ma'lumotni faylga yozish
+            System.out.println("test2.dat fayliga ma'lumitlar yozildi");
+        } catch (IOException e){
 
             e.printStackTrace();
         }
