@@ -16,7 +16,7 @@ Bu repozitoriy mening Java tilini o'rganish jarayonimni ko'rsatish uchun. CV yok
 Repozitoriy mavzular bo'yicha papkalarga ajratilgan. Har bir papka alohida mavzuni o'z ichiga oladi. Papkalar ketma-ketlik bilan nomlangan:
 
 01-java-asoslari
-02-ozgaruvchilar-va-turlar
+02-o'zgaruvchilar-va-turlar
 03-operatorlar
 04-control-flow
 05-massivlar
@@ -40,48 +40,26 @@ Barcha kodlar men tomonidan yozilgan. Har bir kod faylida quyidagilarga e'tibor 
 
 ## O'quv jarayoni
 
-Men ushbu repozitoriy ustida 70 kun ishladim. Kuniga o'rtacha 5 martadan commit qildim. Jami 300 ga yaqin commit bor. Har bir mavzuni o'qib, darhol kod yozib tekshirib ko'rdim. Shunday qilib nazariyani amalda sinab ko'rdim.
-
-## Qanday foydalanish mumkin?
-
-Repozitoriy bilan tanishish uchun uni klon qilib oling:
-
-```
-git clone https://github.com/masharipov2105/java-dasturlash-tili.git
-```
-
-Har bir papkadagi kodlarni alohida ishga tushirib ko'rishingiz mumkin. Masalan:
-
-```
-cd 01-java-asoslari
-javac JVM_JRE_JDK.java
-java JVM_JRE_JDK
-```
+Men ushbu repozitoriy ustida 70 kunga yaqin vaqt davomida ishladim. Kuniga o'rtacha 5 martadan commit qilindi. Jami 200 ga yaqin commit bor. Har bir mavzuni o'qib, darhol kod yozib tekshirib ko'rdim. Shunday qilib nazariyani amalda sinab ko'rdim.
 
 ## Mavzular ro'yxati
 
-1. Java asoslari (JVM, JRE, JDK) - 15+ misol
-2. O'zgaruvchilar va ma'lumot turlari - 20+ misol
-3. Operatorlar - 18+ misol
-4. Control Flow (if, switch, loops) - 35+ misol
-5. Massivlar - 22+ misol
-6. Metodlar - 28+ misol
-7. OOP (Encapsulation, Inheritance, Polymorphism, Abstraction) - 60+ misol
-8. Exception Handling - 25+ misol
-9. Collections (ArrayList, HashMap va boshqalar) - 32+ misol
-10. Generics - 18+ misol
-11. Threads (Multithreading) - 30+ misol
-12. Input/Output (I/O) - 25+ misol
-
-Jami: 328+ kod misoli
-
-## Xatolik yoki takliflar
-
-Agar biror xatolikni ko'rsangiz yoki taklifingiz bo'lsa, Issue ochishingiz yoki Pull Request yuborishingiz mumkin.
+1. Java asoslari (JVM, JRE, JDK)
+2. O'zgaruvchilar va ma'lumot turlari
+3. Operatorlar
+4. Control Flow (if, switch, loops)
+5. Massivlar
+6. Metodlar
+7. OOP (Encapsulation, Inheritance, Polymorphism, Abstraction)
+8. Exception Handling
+9. Collections (ArrayList, HashMap va boshqalar)
+10. Generics
+11. Threads (Multithreading)
+12. Input/Output (I/O)
 
 ## Muallif
 
-Masharipov [Ismingiz va familiyangiz]
+Masharipov Asadbek
 GitHub: masharipov2105
 
 ## Litsenziya
