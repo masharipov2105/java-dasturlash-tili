@@ -98,7 +98,7 @@ java Main
 ```
 
 ## Project Structure
-
+```text
 java-dasturlash-tili/
 ├── Fayllar/              # File I/O — text & binary files
 ├── Generics/             # Generic classes and generic methods
@@ -111,22 +111,21 @@ java-dasturlash-tili/
 ├── Threading/            # Multithreading basics
 ├── Xatoliklar/           # Exception handling
 └── README.md
-
+```
 ---
 
 ## About the author
 
 Asadbek Masharipov — 22-year-old aspiring Java backend developer from Uzbekistan.
 
-    Currently learning: Java Core, Maven, layered architecture, SOLID principles
+Currently learning: Java Core, Maven, layered architecture, SOLID principles
 
-    Goal: Become a freelancer who builds real solutions for real people
+Goal: Become a freelancer who builds real solutions for real people
 
-    Philosophy: Everything I build is open-source — no private repos,
-    anyone can read, use, and learn from my code
+Philosophy: Everything I build is open-source — no private repos, anyone can read, use, and learn from my code
 
-    Working towards: international freelance work (Upwork), then joining a
-    local company with proven experience
+Working towards: international freelance work (Upwork), then joining a
+local company with proven experience
 
-    Gmail: masharipov2105@gmail.com
-    Telegram: masharipov2105(https://t.me/mamsharipov2105)
+Gmail: masharipov2105@gmail.com
+Telegram: masharipov2105(https://t.me/mamsharipov2105)
