@@ -128,4 +128,4 @@ Working towards: international freelance work (Upwork), then joining a
 local company with proven experience
 
 Gmail: masharipov2105@gmail.com
-Telegram: masharipov2105
+Telegram: https://t.me/masharipov2105
